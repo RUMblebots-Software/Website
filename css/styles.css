@@ -5,7 +5,17 @@
     color:#217600;
 }
 
+.bg-verde-colegial{
+    background-color: #217600;
+}
+
+.uprm-web-logo{
+    height: 59px;
+    width: 193px;
+    margin-right: 0px;
+}
+
 #navbar{
-    opacity: 90%;
     transition: top 0.5s;
 }
+

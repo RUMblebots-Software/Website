@@ -1,6 +1,8 @@
 // UPRM RUMblebots Combact Robots Team 
 
+
 // Navbar fades up on scroll
+/*
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function(){
     var currentScrollPos = window.pageYOffset;
@@ -11,3 +13,4 @@ window.onscroll = function(){
     }
     prevScrollpos = currentScrollPos;
 }
+*/
