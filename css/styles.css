@@ -1,21 +1,31 @@
 /* UPRM RUMblebots Combact Robots Team */
 
 /* ¡Hoy, Ahora y Siempre... Colegio! */
-.verde-colegial{ 
-    color:#217600;
+.verde-colegial {
+    color: #217600;
 }
 
-.bg-verde-colegial{
+.bg-verde-colegial {
     background-color: #217600;
 }
 
-.uprm-web-logo{
+.uprm-web-logo {
     height: 59px;
     width: 193px;
     margin-right: 0px;
 }
 
-#navbar{
+#navbar {
     transition: top 0.5s;
 }
 
+#logo {
+    height: 55px;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+}
+
+#logo:hover {
+    transform: scale(1.2);
+}
