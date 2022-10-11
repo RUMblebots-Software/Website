@@ -1,29 +1,75 @@
+<!--UPRM RUMblebots Combact Robots Team-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!--Required Meta Tags-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rumblebots</title>
+
+    <!--Tab Title and Logo-->
+    <title>RUMblebots</title>
+    <link rel="icon" href="/img/rumblebots.png">
 
     <!--StyleSheets-->
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
+
+
 <body>
-    <nav class="navbar fixed-top">
-        <div class="container">
+    <!--Navigation Bar-->
+    <nav class="navbar navbar-expand-lg bg-white" id="navbar">
+        <div class="container-fluid">
             <a class="navbar-brand" href="/index.html">
-                <img src="/img/rumblebots.png" height="100">
+                <img id="logo" src="/img/rumblebots.png" height="70" alt="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarItems" aria-controls="navbar" aria-expanded="false" aria-label="Toggle Nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarItems">
+                <ul class="navbar-nav">
+                    <li class="navbar-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="nav-link" href="#">
+                            Abouts us
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="nav-link" href="#">
+                            Meet the team
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="nav-link" href="#">
+                            Meet the bots
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="nav-link" href="#">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a class="navbar-brand d-none d-lg-block" href="https://www.uprm.edu/portada/">
+                <img src="/img/rum_upr_web.jpg" class="uprm-web-logo">
             </a>
         </div>
     </nav>
 
-    <img src="/img/rumblebots.png">
-    <img src="/img/seal-rum-uprm-1280x1280px.png">
-
+    <!--Team Cover Photo-->
+    <img src="/img/team-2021-2022.png" class="img-fluid" alt="Team 2021-2020">
 
     <!--Scripts-->
     <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </html>
