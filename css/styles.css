@@ -28,3 +28,28 @@
 #logo:hover {
     transform: scale(1.2);
 }
+
+@keyframes blink {
+    50%{
+        border-left: 4px solid #217600;
+      }
+    50%{
+        border-left: 4px solid transparent;
+    }
+}
+
+.cursor-blink{
+    border-left: 4px solid #217600;
+    animation: blink 1.5s infinite;
+}
+
+.cursor-static{
+    border-left: 4px solid #217600;
+}
+
+
+@media screen and (min-width: 992px){
+    .parallelogram{
+        clip-path: polygon(25% 0%, 100% 0%, 81% 100%, 0% 100%);
+    }
+}
