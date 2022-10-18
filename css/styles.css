@@ -57,3 +57,15 @@
         clip-path: polygon(25% 0%, 100% 0%, 81% 100%, 0% 100%);
     }
 }
+
+
+
+/*Make an image go from truly trasnaprent to visible*/
+@keyframes fadeIn{from {opacity: 0;} to{opacity: 1;}}
+
+
+/*Fade In Animation*/
+.fade-in{
+    animation: fadeIn ease-in 1;
+    animation-duration: 1s;
+}
