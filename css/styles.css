@@ -9,10 +9,29 @@
     background-color: #217600;
 }
 
+.grey-rumble{
+    color: #989898;
+}
+
 .uprm-web-logo {
     height: 59px;
     width: 193px;
     margin-right: 0px;
+}
+
+.gradient{
+    -webkit-mask-image: linear-gradient(to left, black 55%, transparent 97%);
+    mask-image: linear-gradient(to left, black 55%, transparent 96%);
+}
+/* BS Container with NO padding*/
+.container-hero{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 #navbar {
@@ -27,4 +46,41 @@
 
 #logo:hover {
     transform: scale(1.2);
+}
+
+@keyframes blink {
+    50%{
+        border-left: 4px solid #217600;
+      }
+    50%{
+        border-left: 4px solid transparent;
+    }
+}
+
+.cursor-blink{
+    border-left: 4px solid #217600;
+    animation: blink 1.5s infinite;
+}
+
+.cursor-static{
+    border-left: 4px solid #217600;
+}
+
+
+@media screen and (min-width: 992px){
+    .parallelogram{
+        clip-path: polygon(25% 0%, 100% 0%, 81% 100%, 0% 100%);
+    }
+}
+
+
+
+/*Make an image go from truly trasnaprent to visible*/
+@keyframes fadeIn{from {opacity: 0;} to{opacity: 1;}}
+
+
+/*Fade In Animation*/
+.fade-in{
+    animation: fadeIn ease-in 1;
+    animation-duration: 1s;
 }
