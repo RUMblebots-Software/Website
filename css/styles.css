@@ -19,6 +19,11 @@
     margin-right: 0px;
 }
 
+.gradient{
+    -webkit-mask-image: linear-gradient(to left, black 55%, transparent 97%);
+    mask-image: linear-gradient(to left, black 55%, transparent 96%);
+}
+
 #navbar {
     transition: top 0.5s;
 }
