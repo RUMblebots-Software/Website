@@ -17,7 +17,7 @@ window.onscroll = function(){
 
 var typeWriter = document.getElementById('typewriter');
 var cursor = document.getElementById('cursor');
-var textArray = ["design!", "manufacture!", "code!", "test!", "optimize!", "market!", "rumble!"];
+var textArray = ["design.", "manufacture.", "code.", "test.", "optimize.", "market.", "RUMBLE."];
 
 
 // backspace effect function
@@ -70,6 +70,13 @@ function startTyping(i){
         });
     }
 };
+
+
+function startImageFadeIn(img){
+    
+}
+
+
 
 // wait one second before starting the typer
 cursor.classList.add("cursor-blink");
