@@ -9,10 +9,53 @@
     background-color: #217600;
 }
 
+.grey-rumble{
+    color: #989898;
+}
+
+.green-dark-rumble{
+    color: #48955f;
+}
+
+.green-light-rumble{
+    color: #a0c18a;
+}
+
+.yellow-lightning{
+    color: #FFBF1F;
+}
+
+.green-logistics{
+    color: #85bb65;
+}
+
+.green-matrix{
+    color: #03A062;
+}
+
 .uprm-web-logo {
     height: 59px;
     width: 193px;
     margin-right: 0px;
+}
+
+.gradient{
+    -webkit-mask-image: linear-gradient(to left, black 55%, transparent 97%);
+    mask-image: linear-gradient(to left, black 55%, transparent 96%);
+}
+
+.bg-gradient-white{
+    background-image: linear-gradient(180deg,#f9fbfd 0,#fff);
+}
+/* BS Container with NO padding*/
+.container-hero{
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 #navbar {
@@ -29,19 +72,48 @@
     transform: scale(1.2);
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+@keyframes blink {
+    50%{
+        border-left: 4px solid #48955f;
+      }
+    50%{
+        border-left: 4px solid transparent;
+    }
 }
 
-.container{
-    width: 100%;
-    height: 100vh;
-    background: white;
-    color:#217600;
-    display:flex;
-    align-items: center;
-    justify-content:flex-start;
+.cursor-blink{
+    border-left: 4px solid #48955f;
+    animation: blink 1.5s infinite;
 }
+
+.cursor-static{
+    border-left: 4px solid #48955f;
+}
+
+
+@media screen and (min-width: 992px){
+    .parallelogram{
+        clip-path: polygon(25% 0%, 100% 0%, 81% 100%, 0% 100%);
+    }
+}
+
+
+
+/*Make an image go from truly trasnaprent to visible*/
+@keyframes fadeIn{from {opacity: 0;} to{opacity: 1;}}
+
+
+/*Fade In Animation*/
+.fade-in{
+    animation: fadeIn ease-in 1;
+    animation-duration: 1s;
+}
+
+.text-justify{
+    text-align: justify;
+    text-justify: auto;
+}
+
+.round-border{
+    border-radius: 5px;
+  }
