@@ -33,6 +33,26 @@
     color: #03A062;
 }
 
+.blue-facebook{
+    color: #4267B2;
+}
+
+.blue-twitter{
+    color: #1DA1F2;
+}
+
+.blue-linkedin{
+    color: #0072b1;
+}
+
+.black-github{
+    color: #333;
+}
+
+.pink-instagram{
+  color: #C13584;
+}
+
 .uprm-web-logo {
     height: 59px;
     width: 193px;
@@ -45,10 +65,11 @@
 }
 
 .bg-gradient-white{
-    background-image: linear-gradient(180deg,#f9fbfd 0,#fff);
+    background-image: linear-gradient(180deg,#f0f1f3 0,#fff);
 }
 /* BS Container with NO padding*/
-.container-hero{
+
+.container-hero {
     --bs-gutter-x: 0;
     --bs-gutter-y: 0;
     width: 100%;
@@ -57,6 +78,7 @@
     padding-left: 0px;
     padding-right: 0px;
 }
+
 
 #navbar {
     transition: top 0.5s;
