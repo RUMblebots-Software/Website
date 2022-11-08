@@ -59,6 +59,13 @@
     margin-right: 0px;
 }
 
+#section-carousel .carousel-item img {  
+    object-fit: contain;
+    object-position: center;
+    overflow: hidden;
+    height:50vh;
+  }
+
 .gradient{
     -webkit-mask-image: linear-gradient(to left, black 55%, transparent 97%);
     mask-image: linear-gradient(to left, black 55%, transparent 96%);
