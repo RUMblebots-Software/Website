@@ -25,42 +25,9 @@
     <!--Navigation Bar-->
     <nav class="navbar navbar-expand-md bg-white" id="navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html">
+            <a class="navbar-brand d-none d-md-block" href="/index.html">
                 <img id="logo" src="/img/rumblebots.png" height="70" alt="navbar-logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarItems"
-                aria-controls="navbar" aria-expanded="false" aria-label="Toggle Nav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarItems">
-                <ul class="navbar-nav">
-                    <li class="navbar-item">
-                        <a class="nav-link active" aria-current="page" href="#">
-                            Home
-                        </a>
-                    </li>
-                    <li class="navbar-item">
-                        <a class="nav-link" href="#">
-                            Abouts us
-                        </a>
-                    </li>
-                    <li class="navbar-item">
-                        <a class="nav-link" href="#">
-                            Meet the team
-                        </a>
-                    </li>
-                    <li class="navbar-item">
-                        <a class="nav-link" href="#">
-                            Meet the bots
-                        </a>
-                    </li>
-                    <li class="navbar-item">
-                        <a class="nav-link" href="#">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            </div>
             <a class="navbar-brand d-none d-md-block" href="https://www.uprm.edu/portada/">
                 <img src="/img/rum_upr_web.jpg" class="uprm-web-logo">
             </a>
@@ -68,6 +35,11 @@
     </nav>
     <!--Home Page Main Hero-->
     <div class="container-hero">
+        <div class="row d-md-none mb-5">
+            <div class="col-sm-12 d-flex justify-content-center">
+                <img id="logo" src="/img/rumblebots.png" height="100" alt="logo">
+            </div>
+        </div>
         <div class="row align-items-center">
             <div class="col-lg-5 col-sm-12">
                 <p class="display-4 text-center fw-semibold">We <span id="typewriter"
@@ -201,7 +173,7 @@
             <div class="row mt-5">
                 <div class="col-sm-12">
                     <p class="display-5 text-center">Our Departments</p>
-                    <div class="col-sm-12 mt-5">
+                    <div class="col-sm-12 mt-3">
                         <ul class="nav nav-tabs nav-fill" id="departmentTabs" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="design-tab" data-bs-toggle="tab"
@@ -311,13 +283,13 @@
     </section>
 
     <!--Bot Info-->
-    <section class="mt-5">
+    <section class>
         <div class="container">
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-sm-12">
                     <p class="display-5 text-center">Our Bots</p>
                 </div>
-                <div class="row mt-5">
+                <div class="row mt-3">
                     <div class="col-sm-12">
                         <ul class="nav nav-tabs nav-fill" id="botTabs" role="tablist">
                             <li class="nav-item" role="presentation">
@@ -443,8 +415,6 @@
             </div>
         </div>
     </section>
-
-
     <!--Scripts-->
     <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -454,46 +424,10 @@
 
 <!--Footer-->
 <footer>
-    <div class="container-fluid">
-        <div class="row p-5 bg-light">
-            <div class="col-xs-12 col-md-3">
-                <p class="h3"><span class="display-6 text-center green-dark-rumble">RUM</span>blebots</p>
-                <p class="text-secondary mb-0">Combat Robots Team</p>
-                <p class="text-secondary mt-0 mb-0">University of Puerto Rico, Mayagüez Campus</p>
-                <p class="text-secondary mt-0 mb-0">Mechanical Engineering Deparment</p>
-                <p class="text-secondary mt-0">Copyright &copy;
-                    <script>document.write(new Date().getFullYear())</script>
-                </p>
-            </div>
-            <div class="col-xs-12 col-md-3">
-                <p class="h5 mb-3"><i class="fa-regular fa-file-code fa-fw green-dark-rumble"></i> Resources</p>
-                <div class="mb-2">
-                    <a class="text-secondary text-decoration-none"
-                        href="https://www.arduino.cc/en/Guide/Introduction">Introduction to Arduino
-                    </a>
-                </div>
-                <div class="mb-2">
-                    <a class="text-secondary text-decoration-none"
-                        href="https://www.hackerrank.com/products/main/">Hacker Rank</a>
-                    </a>
-                </div>
-                <div class="mb-2">
-                    <a class="text-secondary text-decoration-none"
-                        href="https://www.galileo.org/robotics/design.html">Robotics Design Process</a>
-                </div>
-                <div class="mb-2">
-                    <a class="text-secondary text-decoration-none" href="https://reactjs.org">React</a>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-3">
-                <p class="h5 mb-3"><i class="fa-regular fa-envelope-open fa-fw green-dark-rumble"></i> Form</p>
-                <div class="form-outline mb-4">
-                    <input type="email" id="form5Example25" class="form-control" />
-                    <label class="form-label" for="form5Example25"> Email address</label>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-3 text-center">
-                <p class="h5 mb-5"> Contact</p>
+    <div class="container-fluid text-center text-md-start">
+        <div class="row p-5 bg-light d-flex flex-sm-row-reverse">
+            <div class="col-xs-12 col-md-6 text-center">
+                <p class="h3 mb-3"><i class="fa-solid fa-earth-americas green-light-rumble"></i> Contact</p>
                 <ul class="list-unstyled list-inline">
                     <li class="list-inline-item"><a href="https://www.facebook.com/UprmRumblebots"><i
                                 class="fa-brands fa-facebook blue-facebook fa-2xl"></i></a></li>
@@ -518,6 +452,15 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <p class="h3"><span class="display-6 text-center green-dark-rumble">RUM</span>blebots</p>
+                <p class="text-secondary mb-0">Combat Robots Team</p>
+                <p class="text-secondary mt-0 mb-0">University of Puerto Rico, Mayagüez Campus</p>
+                <p class="text-secondary mt-0 mb-0">Mechanical Engineering Deparment</p>
+                <p class="text-secondary mt-0">Copyright &copy;
+                    <script>document.write(new Date().getFullYear())</script>
+                </p>
             </div>
         </div>
     </div>
