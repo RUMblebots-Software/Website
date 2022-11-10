@@ -110,7 +110,148 @@
 
 .cursor-static{
     border-left: 4px solid #48955f;
+}/* UPRM RUMblebots Combact Robots Team */
+
+/* ¡Hoy, Ahora y Siempre... Colegio! */
+.verde-colegial {
+    color: #217600;
 }
+
+.bg-verde-colegial {
+    background-color: #217600;
+}
+
+.grey-rumble{
+    color: #989898;
+}
+
+.green-dark-rumble{
+    color: #48955f;
+}
+
+.green-light-rumble{
+    color: #a0c18a;
+}
+
+.yellow-lightning{
+    color: #FFBF1F;
+}
+
+.green-logistics{
+    color: #85bb65;
+}
+
+.green-matrix{
+    color: #03A062;
+}
+
+.blue-facebook{
+    color: #4267B2;
+}
+
+.blue-twitter{
+    color: #1DA1F2;
+}
+
+.blue-linkedin{
+    color: #0072b1;
+}
+
+.black-github{
+    color: #333;
+}
+
+.pink-instagram{
+  color: #C13584;
+}
+
+.uprm-web-logo {
+    height: 59px;
+    width: 193px;
+    margin-right: 0px;
+}
+
+.gradient{
+    -webkit-mask-image: linear-gradient(to left, black 55%, transparent 97%);
+    mask-image: linear-gradient(to left, black 55%, transparent 96%);
+}
+
+.bg-gradient-white{
+    background-image: linear-gradient(180deg,#f0f1f3 0,#fff);
+}
+/* BS Container with NO padding*/
+
+.container-hero {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+#navbar {
+    transition: top 0.5s;
+}
+
+#logo {
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+}
+
+#logo:hover {
+    transform: scale(1.2);
+}
+
+@keyframes blink {
+    50%{
+        border-left: 4px solid #48955f;
+      }
+    50%{
+        border-left: 4px solid transparent;
+    }
+}
+
+.cursor-blink{
+    border-left: 4px solid #48955f;
+    animation: blink 1.5s infinite;
+}
+
+.cursor-static{
+    border-left: 4px solid #48955f;
+}
+
+
+@media screen and (min-width: 992px){
+    .parallelogram{
+        clip-path: polygon(25% 0%, 100% 0%, 81% 100%, 0% 100%);
+    }
+}
+
+
+
+/*Make an image go from truly trasnaprent to visible*/
+@keyframes fadeIn{from {opacity: 0;} to{opacity: 1;}}
+
+
+/*Fade In Animation*/
+.fade-in{
+    animation: fadeIn ease-in 1;
+    animation-duration: 1s;
+}
+
+.text-justify{
+    text-align: justify;
+    text-justify: auto;
+}
+
+.round-border{
+    border-radius: 5px;
+  }
+
 
 
 @media screen and (min-width: 992px){
