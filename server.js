@@ -7,6 +7,10 @@ const compiler = webpack(config)
 const express = require("express");
 const app = express();
 
+const staticMiddleware = express.static("dist")
+
+app.use(staticMiddleware)
+
 app.use(
   middleware(compiler, {
     // webpack-dev-middleware options
