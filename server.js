@@ -1,8 +1,8 @@
 //UPRM RUMblebots Combact Robots Team 
 const webpack = require("webpack")
 const middleware = require("webpack-dev-middleware")
-const config = require("./webpack.config")
-const compiler = webpack(config)
+const webpackconfig = require("./webpack.config")
+const compiler = webpack(webpackconfig)
 const express = require("express");
 const app = express();
 

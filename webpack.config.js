@@ -8,7 +8,11 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
     },
     devServer: {
-        static: path.resolve(__dirname, 'dist')
+        static: {
+            directory: path.join(__dirname, 'public')
+        },
+        compress: true,
+        port: 9000,
     },
     plugins: [new HtmlWebpackPlugin({ template: './src/html/index.html' })],
     module: {
