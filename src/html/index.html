@@ -34,393 +34,420 @@
             <a class="navbar-brand d-none d-md-block" href="/dist/index.html">
                 <img id="logo" src="/src/img/rumblebots.png" height="70" alt="navbar-logo">
             </a>
+            <ul class="nav nav-pills mb-3 align-items-left" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link verde-colegial active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link verde-colegial" id="pills-team-tab" data-bs-toggle="pill" data-bs-target="#pills-team" type="button" role="tab" aria-controls="pills-team" aria-selected="false">Meet the Team</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link verde-colegial" id="pills-bot-tab" data-bs-toggle="pill" data-bs-target="#pills-bot" type="button" role="tab" aria-controls="pills-bot" aria-selected="false">Our Bots</button>
+                </li>
+            </ul>
             <a class="navbar-brand d-none d-md-block" href="https://www.uprm.edu/portada/">
                 <img src="/src/img/rum_upr_web.jpg" class="uprm-web-logo">
             </a>
         </div>
     </nav>
-    <!--Home Page Main Hero-->
-    <div class="container-hero">
-        <div class="row d-md-none mb-5">
-            <div class="col-sm-12 d-flex justify-content-center">
-                <img id="logo" src="/src/img/rumblebots.png" height="100" alt="logo">
-            </div>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-lg-5 col-sm-12">
-                <p class="display-4 text-center fw-semibold">We <span id="typewriter"
-                        class="display-4 green-dark-rumble fw-semibold"></span><span id="cursor"></span></p>
-                <p class="display-6 text-center text-muted"><span
-                        class="display-6 text-center green-dark-rumble">RUM</span>BLEBOTS is a combat robotics project
-                    of the
-                    Department of Mechanical Engineering at UPRM initially founded in 2004</p>
-            </div>
-            <div class="col-lg-7 col-sm-12 gradient d-flex justify-content-end">
-                <img class="img-fluid fade-in" src="/src/img/teampic2021-2022.jpeg">
-            </div>
-        </div>
-    </div>
-
-    <!--Team Info-->
-    <section>
-        <div class="container mt-5">
-            <div class="row mt-3">
-                <div class="col-md-4 col-sm-12 text-center text-md-start">
-                    <div class="mb-3"><i class="fa-solid fa-robot fa-2xl green-light-rumble"></i></div>
-                    <p class="display-6">Combat Robotics</p>
-                    <p class="lead text-muted">Robot combat is an event where custom-built machines fight using various
-                        methods to incapacitate each other.</p>
-                </div>
-                <div class="col-md-4 col-sm-12 text-center text-md-start">
-                    <div class="mb-3"><i class="fa-solid fa-graduation-cap fa-2xl green-light-rumble"></i></div>
-                    <p class="display-6">Our mission</p>
-                    <p class="lead text-muted">To complete development of combat robots while enabling its members to
-                        learn
-                        and
-                        apply engineering knowledge and concepts in a real, hands-on manner.</p>
-                </div>
-                <div class="col-md-4 col-sm-12 text-center text-md-start">
-                    <div class="mb-3"><i class="fa-solid fa-people-group fa-2xl green-light-rumble"></i></div>
-                    <p class="display-6">Our Team</p>
-                    <p class="lead text-muted">Our team is mainly open to members of all engineering majors; however, we
-                        do
-                        welcome members
-                        from any department of the University should they demonstrate interest and motivation in the
-                        project.</p>
-                </div>
-            </div>
-    </section>
-
-
-    <!--Our Work Section-->
-    <div class="container-hero bg-light">
-        <div class="container mt-5">
-            <div class="row align-items-center">
-                <div class="col-lg-4 d-none d-lg-block">
-                    <img src="/src/img/spring2022-openhouse.jpeg" class="img-fluid round-border">
-                </div>
-                <div class="col-lg-8 mt-5 mb-5 text-center">
-                    <div class="row">
-                        <p class="display-5">This is what we do</p>
-                        <p class="lead text-muted">We design, manufacture, code, test, optimize and market combat robots
-                            of varying
-                            weights to represent the UPRM and Puerto Rico
-                            at the Nationals Robotics League and other robotics competitions.
-                        </p>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+            <!--Home Page Main Hero-->
+            <div class="container-hero">
+                <div class="row d-md-none mb-5">
+                    <div class="col-sm-12 d-flex justify-content-center">
+                        <img id="logo" src="/src/img/rumblebots.png" height="100" alt="logo">
                     </div>
-                    <!--Carousel-->
-                    <div class="row d-none d-lg-block">
-                        <div id="section-carousel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner" style="width:100%; height: 350px !important;">
-                                <div class="carousel-item active">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <img src="/src/img/meeting-10-04-2022-1.jpg" class="round-border img-fluid">
-                                            </div>
-                                            <div class="col-4">
-                                                <img src="/src/img/meeting-10-04-2022-2.jpg" class="round-border img-fluid">
-                                            </div>
-                                            <div class="col-4">
-                                                <img src="/src/img/meeting-10-04-2022-3.jpg" class="round-border img-fluid">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <img src="/src/img/workshop-2022-1.jpg" class="round-border img-fluid">
-                                            </div>
-                                            <div class="col-4">
-                                                <img src="/src/img/workshop-2022-2.jpg" class="round-border img-fluid">
-                                            </div>
-                                            <div class="col-4">
-                                                <img src="/src/img/workshop-2022-3.jpg" class="round-border img-fluid">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-sm-12">
+                        <p class="display-4 text-center fw-semibold">We <span id="typewriter"
+                                class="display-4 green-dark-rumble fw-semibold"></span><span id="cursor"></span></p>
+                        <p class="display-6 text-center text-muted"><span
+                                class="display-6 text-center green-dark-rumble">RUM</span>BLEBOTS is a combat robotics project
+                            of the
+                            Department of Mechanical Engineering at UPRM initially founded in 2004</p>
+                    </div>
+                    <div class="col-lg-7 col-sm-12 gradient d-flex justify-content-end">
+                        <img class="img-fluid fade-in" src="/src/img/teampic2021-2022.jpeg">
+                    </div>
+                </div>
+            </div>
+
+            <!--Team Info-->
+            <section>
+                <div class="container mt-5">
+                    <div class="row mt-3">
+                        <div class="col-md-4 col-sm-12 text-center text-md-start">
+                            <div class="mb-3"><i class="fa-solid fa-robot fa-2xl green-light-rumble"></i></div>
+                            <p class="display-6">Combat Robotics</p>
+                            <p class="lead text-muted">Robot combat is an event where custom-built machines fight using various
+                                methods to incapacitate each other.</p>
+                        </div>
+                        <div class="col-md-4 col-sm-12 text-center text-md-start">
+                            <div class="mb-3"><i class="fa-solid fa-graduation-cap fa-2xl green-light-rumble"></i></div>
+                            <p class="display-6">Our mission</p>
+                            <p class="lead text-muted">To complete development of combat robots while enabling its members to
+                                learn
+                                and
+                                apply engineering knowledge and concepts in a real, hands-on manner.</p>
+                        </div>
+                        <div class="col-md-4 col-sm-12 text-center text-md-start">
+                            <div class="mb-3"><i class="fa-solid fa-people-group fa-2xl green-light-rumble"></i></div>
+                            <p class="display-6">Our Team</p>
+                            <p class="lead text-muted">Our team is mainly open to members of all engineering majors; however, we
+                                do
+                                welcome members
+                                from any department of the University should they demonstrate interest and motivation in the
+                                project.</p>
                         </div>
                     </div>
-                    <!--Album View for medium size screens and below-->
-                    <div class="row d-lg-none d-flex justify-content-center align-items-end">
-                        <div class="col-4">
-                            <img src="/src/img/meeting-10-04-2022-1.jpg" class="img-fluid round-border">
-                        </div>
-                        <div class="col-4">
+                </div>
+            </section>
+
+
+            <!--Our Work Section-->
+            <div class="container-hero bg-light">
+                <div class="container mt-5">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 d-none d-lg-block">
                             <img src="/src/img/spring2022-openhouse.jpeg" class="img-fluid round-border">
                         </div>
-                        <div class="col-4">
-                            <img src="/src/img/meeting-10-04-2022-3.jpg" class="img-fluid round-border">
-                        </div>
-                    </div>
-                    <div class="row d-lg-none d-flex justify-content-center align-items-end mt-4">
-                        <div class="col-4">
-                            <img src="/src/img/workshop-2022-1.jpg" class="img-fluid round-border">
-                        </div>
-                        <div class="col-4">
-                            <img src="/src/img/workshop-2022-2.jpg" class="img-fluid round-border">
-                        </div>
-                        <div class="col-4">
-                            <img src="/src/img/workshop-2022-3.jpg" class="img-fluid round-border">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--Departments Info-->
-    <section>
-        <div class="container">
-            <div class="row mt-5">
-                <div class="col-sm-12">
-                    <p class="display-5 text-center">Our Departments</p>
-                    <div class="col-sm-12 mt-3">
-                        <ul class="nav nav-tabs nav-fill" id="departmentTabs" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="design-tab" data-bs-toggle="tab"
-                                    data-bs-target="#design-tab-pane" type="button" role="tab"
-                                    aria-controls="design-tab-pane" aria-selected="true"><i
-                                        class="fa-solid fa-gear grey-rumble fa-fw"></i>
-                                    <p class="lead">Design and manufacturing</p>
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="electronics-tab" data-bs-toggle="tab"
-                                    data-bs-target="#electronics-tab-pane" type="button" role="tab"
-                                    aria-controls="electronics-tab-pane" aria-selected="true"><i
-                                        class="fa-solid fa-bolt fa-fw yellow-lightning"></i>
-                                    <p class="lead">Electronics</p>
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="home-tab" data-bs-toggle="tab"
-                                    data-bs-target="#logistics-tab-pane" type="button" role="tab"
-                                    aria-controls="logistics-tab-pane" aria-selected="true"><i
-                                        class="fa-solid fa-chart-simple fa-fw green-light-rumble"></i>
-                                    <p class="lead">Logistics</p>
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="software-tab" data-bs-toggle="tab"
-                                    data-bs-target="#software-tab-pane" type="button" role="tab"
-                                    aria-controls="software-tab-pane" aria-selected="true"><i
-                                        class="fa-solid fa-laptop-code fa-fw green-dark-rumble"></i>
-                                    <p class="lead">Software</p>
-                                </button>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="departmentContent">
-                            <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel"
-                                aria-labelledby="design-tab" tabindex="0">
-                                <div class="container">
-                                    <div class="row mt-5 align-items-center">
-                                        <div class="col-md-6">
-                                            <p class="lead text-muted text-center text-md-start">The core department of
-                                                the RUMblebots Team.
-                                                Composed of mechanical engineers who work in
-                                                designing and manufacturing the different parts that come together to
-                                                make our battle bots. </p>
-                                        </div>
-                                        <div class="col-md-6 d-flex justify-content-center">
-                                            <img src="/src/img/mecanica-2019.jpg" class="round-border" height="350">
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="col-lg-8 mt-5 mb-5 text-center">
+                            <div class="row">
+                                <p class="display-5">This is what we do</p>
+                                <p class="lead text-muted">We design, manufacture, code, test, optimize and market combat robots
+                                    of varying
+                                    weights to represent the UPRM and Puerto Rico
+                                    at the Nationals Robotics League and other robotics competitions.
+                                </p>
                             </div>
-                            <div class="tab-pane fade" id="electronics-tab-pane" role="tabpanel"
-                                aria-labelledby="electronics-tab" tabindex="0">
-                                <div class="container">
-                                    <div class="row mt-5 align-items-center">
-                                        <div class="col-md-6">
-                                            <p class="lead text-muted text-center text-md-start">Inside our bots you
-                                                will find the craft of the
-                                                electronics department. Composed of electrical engineers that design and
-                                                integrate the electronic circuits that power our bots.</p>
-                                        </div>
-                                        <div class="col-md-6 d-flex justify-content-center">
-                                            <img src="/src/img/electronics-2019.jpg" class="round-border" height="350">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="logistics-tab-pane" role="tabpanel"
-                                aria-labelledby="logistics-tab" tabindex="0">
-                                <div class="container">
-                                    <div class="row mt-5 align-items-center">
-                                        <div class="col-md-6">
-                                            <p class="lead text-muted text-center text-md-start">The department that
-                                                brings the brings the team
-                                                together. Composed of industrial engineers that handle the logistics,
-                                                cash flow, inventory, marketing and all administrative roles necessary
-                                                to keep the team on track. </p>
-                                        </div>
-                                        <div class="col-md-6 d-flex justify-content-center">
-                                            <img src="/src/img/meeting-10-04-2022-1.jpg" class="round-border" height="350">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="software-tab-pane" role="tabpanel"
-                                aria-labelledby="software-tab" tabindex="0">
-                                <div class="container">
-                                    <div class="row mt-5 align-items-center">
-                                        <div class="col-md-6">
-                                            <p class="lead text-muted text-center text-md-start">This department is
-                                                composed of software engineers
-                                                and computer scientists that are in charge of the autonomous bots like
-                                                the mini sumo category and the development of web services to promote
-                                                and aid the team.</p>
-                                        </div>
-                                        <div class="col-md-6 d-flex justify-content-center">
-                                            <img src="/src/img/software-2019.jpg" class="round-border" height="350">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-    </section>
-
-    <!--Bot Info-->
-    <section class>
-        <div class="container">
-            <div class="row mt-5">
-                <div class="col-sm-12">
-                    <p class="display-5 text-center">Our Bots</p>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-sm-12">
-                        <ul class="nav nav-tabs nav-fill" id="botTabs" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="arsenal-tab" data-bs-toggle="tab"
-                                    data-bs-target="#arsenal-tab-pane" type="button" role="tab"
-                                    aria-controls="arsenal-tab-pane" aria-selected="true">Arsenal</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="cherry-tab" data-bs-toggle="tab"
-                                    data-bs-target="#cherry-tab-pane" type="button" role="tab"
-                                    aria-controls="cherry-tab-pane" aria-selected="false">La Cherry</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="luigi-tab" data-bs-toggle="tab"
-                                    data-bs-target="#luigi-tab-pane" type="button" role="tab"
-                                    aria-controls="luigi-tab-pane" aria-selected="false">Luigi</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="mario-tab" data-bs-toggle="tab"
-                                    data-bs-target="#mario-tab-pane" type="button" role="tab"
-                                    aria-controls="mario-tab-pane" aria-selected="false">Mario</button>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="botContent">
-                            <div class="tab-pane fade show active" id="arsenal-tab-pane" role="tabpanel"
-                                aria-labelledby="arsenal-tab" tabindex="0">
-                                <div class="container">
-                                    <div class="row mt-5">
-                                        <div class="col-md-12 col-lg-6">
-                                            <div id="carousel-arsenal" class="carousel carousel-fade"
-                                                data-bs-ride="carousel">
-                                                <div class="carousel-inner">
-                                                    <div class="carousel-item active">
-                                                        <img src="/src/img/arsenal-1.png" class="img-fluid" alt="arsenal-1">
+                            <!--Carousel-->
+                            <div class="row d-none d-lg-block">
+                                <div id="section-carousel" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner" style="width:100%; height: 350px !important;">
+                                        <div class="carousel-item active">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <img src="/src/img/meeting-10-04-2022-1.jpg" class="round-border img-fluid">
                                                     </div>
-                                                    <div class="carousel-item">
-                                                        <img src="/src/img/arsenal-2.png" class="img-fluid" alt="arsenal-2">
+                                                    <div class="col-4">
+                                                        <img src="/src/img/meeting-10-04-2022-2.jpg" class="round-border img-fluid">
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <img src="/src/img/meeting-10-04-2022-3.jpg" class="round-border img-fluid">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-12 col-lg-6">
-                                            <p class="display-5 text-center mb-0">Arsenal</p>
-                                            <p class="display-6 text-center text-muted mt-0">12-Pounds Category</p>
-                                            <p class="lead text-muted text-center text-md-start">A modular robot whose
-                                                weapon can be swapped from
-                                                a horizontal to a vertical spinner. It has a chassis made of a composite
-                                                of titanium, Nylon X and aluminum for the side and back plate. The rest
-                                                of the chassis is made from 3D printed parts and aluminum 6061. The
-                                                weapons use a bar of aluminum with tool steel inserts.</p>
+                                        <div class="carousel-item">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <img src="/src/img/workshop-2022-1.jpg" class="round-border img-fluid">
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <img src="/src/img/workshop-2022-2.jpg" class="round-border img-fluid">
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <img src="/src/img/workshop-2022-3.jpg" class="round-border img-fluid">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="cherry-tab-pane" role="tabpanel" aria-labelledby="cherry-tab"
-                                tabindex="0">
-                                <div class="container">
-                                    <div class="row mt-5">
-                                        <div class="col-md-12 col-lg-6">
-                                            <img src="/src/img/lacherry.png" class="img-fluid">
-                                        </div>
-                                        <div class="col-md-12 col-lg-6">
-                                            <p class="display-5 text-center mb-0">La Cherry</p>
-                                            <p class="display-6 text-center text-muted mt-0">17-Pounds</p>
-                                            <p class="lead text-muted text-center text-md-start">A pusher robot that has
-                                                an aluminum body with a
-                                                reinforced steel front. It’s meant to be a practice robot to take hits
-                                                from other reinforced battle bots that have been created by our team. It
-                                                has a velocity of up to 15MPH and uses three wheels along with two
-                                                protective bumpers.</p>
-                                        </div>
-                                    </div>
+                            <!--Album View for medium size screens and below-->
+                            <div class="row d-lg-none d-flex justify-content-center align-items-end">
+                                <div class="col-4">
+                                    <img src="/src/img/meeting-10-04-2022-1.jpg" class="img-fluid round-border">
+                                </div>
+                                <div class="col-4">
+                                    <img src="/src/img/spring2022-openhouse.jpeg" class="img-fluid round-border">
+                                </div>
+                                <div class="col-4">
+                                    <img src="/src/img/meeting-10-04-2022-3.jpg" class="img-fluid round-border">
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="luigi-tab-pane" role="tabpanel" aria-labelledby="luigi-tab"
-                                tabindex="0">
-                                <div class="container">
-                                    <div class="row mt-5 align-items-center">
-                                        <div class="col-md-12 col-lg-6 d-flex justify-content-center">
-                                            <img src="/src/img/luigi.png" class="img-fluid">
-                                        </div>
-                                        <div class="col-md-12 col-lg-6">
-                                            <p class="display-5 text-center mb-0">Luigi</p>
-                                            <p class="display-6 text-center text-muted mt-0">Mini-Sumo Category</p>
-                                            <p class="lead text-muted text-center text-md-start">Our next upgrade to the
-                                                RUMblebots’ Mini-Sumo
-                                                family. Luigi is controlled by a Teensy 4.0 Development Board equipped
-                                                with the ARM Cortex-M7 processor. It’s two motors are controlled by the
-                                                TB6612FNG motor driver IC and the robot keeps track of its orientation
-                                                with the L3GD20H gyro carrier to measure the yaw angular rates of
-                                                rotation, all embedded in place with our custom-made printed circuit
-                                                board. Luigi is equipped with seven Sharp GP2Y0A21YK0F analog distance
-                                                sensors and three ML2 dual micro line sensors underneath, powered by a 3
-                                                cell, 11.1V, 350mAh battery.</p>
-                                        </div>
-                                    </div>
+                            <div class="row d-lg-none d-flex justify-content-center align-items-end mt-4">
+                                <div class="col-4">
+                                    <img src="/src/img/workshop-2022-1.jpg" class="img-fluid round-border">
                                 </div>
-                            </div>
-                            <div class="tab-pane fade" id="mario-tab-pane" role="tabpanel" aria-labelledby="mario-tab"
-                                tabindex="0">
-                                <div class="container">
-                                    <div class="row mt-5 align-items-center">
-                                        <div class="col-md-12 col-lg-6 d-flex justify-content-center">
-                                            <img src="/src/img/mario.png" class="img-fluid">
-                                        </div>
-                                        <div class="col-md-12 col-lg-6">
-                                            <p class="display-5 text-center mb-0">Mario</p>
-                                            <p class="display-6 text-center text-muted mt-0">Mini-Sumo Category</p>
-                                            <p class="lead text-muted text-center text-md-start">RUMblebots' first
-                                                mini-sumo robot. An autonomous
-                                                robot controlled by an ATmega32U4 micro-controller. Mario is equipped
-                                                with two Sharp GP2Y0A21YK0F analog distance sensors on the front and
-                                                three ML1 micro line sensors underneath. This mini sumo is powered
-                                                by a 3 cell, 11.1V, 350mAh battery.</p>
-                                        </div>
-                                    </div>
+                                <div class="col-4">
+                                    <img src="/src/img/workshop-2022-2.jpg" class="img-fluid round-border">
+                                </div>
+                                <div class="col-4">
+                                    <img src="/src/img/workshop-2022-3.jpg" class="img-fluid round-border">
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
 
+            <!--Departments Info-->
+            <section>
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="col-sm-12">
+                            <p class="display-5 text-center">Our Departments</p>
+                            <div class="col-sm-12 mt-3">
+                                <ul class="nav nav-tabs nav-fill" id="departmentTabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="design-tab" data-bs-toggle="tab"
+                                            data-bs-target="#design-tab-pane" type="button" role="tab"
+                                            aria-controls="design-tab-pane" aria-selected="true"><i
+                                                class="fa-solid fa-gear grey-rumble fa-fw"></i>
+                                            <p class="lead">Design and manufacturing</p>
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="electronics-tab" data-bs-toggle="tab"
+                                            data-bs-target="#electronics-tab-pane" type="button" role="tab"
+                                            aria-controls="electronics-tab-pane" aria-selected="true"><i
+                                                class="fa-solid fa-bolt fa-fw yellow-lightning"></i>
+                                            <p class="lead">Electronics</p>
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="home-tab" data-bs-toggle="tab"
+                                            data-bs-target="#logistics-tab-pane" type="button" role="tab"
+                                            aria-controls="logistics-tab-pane" aria-selected="true"><i
+                                                class="fa-solid fa-chart-simple fa-fw green-light-rumble"></i>
+                                            <p class="lead">Logistics</p>
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="software-tab" data-bs-toggle="tab"
+                                            data-bs-target="#software-tab-pane" type="button" role="tab"
+                                            aria-controls="software-tab-pane" aria-selected="true"><i
+                                                class="fa-solid fa-laptop-code fa-fw green-dark-rumble"></i>
+                                            <p class="lead">Software</p>
+                                        </button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="departmentContent">
+                                    <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel"
+                                        aria-labelledby="design-tab" tabindex="0">
+                                        <div class="container">
+                                            <div class="row mt-5 align-items-center">
+                                                <div class="col-md-6">
+                                                    <p class="lead text-muted text-center text-md-start">The core department of
+                                                        the RUMblebots Team.
+                                                        Composed of mechanical engineers who work in
+                                                        designing and manufacturing the different parts that come together to
+                                                        make our battle bots. </p>
+                                                </div>
+                                                <div class="col-md-6 d-flex justify-content-center">
+                                                    <img src="/src/img/mecanica-2019.jpg" class="round-border" height="350">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="electronics-tab-pane" role="tabpanel"
+                                        aria-labelledby="electronics-tab" tabindex="0">
+                                        <div class="container">
+                                            <div class="row mt-5 align-items-center">
+                                                <div class="col-md-6">
+                                                    <p class="lead text-muted text-center text-md-start">Inside our bots you
+                                                        will find the craft of the
+                                                        electronics department. Composed of electrical engineers that design and
+                                                        integrate the electronic circuits that power our bots.</p>
+                                                </div>
+                                                <div class="col-md-6 d-flex justify-content-center">
+                                                    <img src="/src/img/electronics-2019.jpg" class="round-border" height="350">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="logistics-tab-pane" role="tabpanel"
+                                        aria-labelledby="logistics-tab" tabindex="0">
+                                        <div class="container">
+                                            <div class="row mt-5 align-items-center">
+                                                <div class="col-md-6">
+                                                    <p class="lead text-muted text-center text-md-start">The department that
+                                                        brings the brings the team
+                                                        together. Composed of industrial engineers that handle the logistics,
+                                                        cash flow, inventory, marketing and all administrative roles necessary
+                                                        to keep the team on track. </p>
+                                                </div>
+                                                <div class="col-md-6 d-flex justify-content-center">
+                                                    <img src="/src/img/meeting-10-04-2022-1.jpg" class="round-border" height="350">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="software-tab-pane" role="tabpanel"
+                                        aria-labelledby="software-tab" tabindex="0">
+                                        <div class="container">
+                                            <div class="row mt-5 align-items-center">
+                                                <div class="col-md-6">
+                                                    <p class="lead text-muted text-center text-md-start">This department is
+                                                        composed of software engineers
+                                                        and computer scientists that are in charge of the autonomous bots like
+                                                        the mini sumo category and the development of web services to promote
+                                                        and aid the team.</p>
+                                                </div>
+                                                <div class="col-md-6 d-flex justify-content-center">
+                                                    <img src="/src/img/software-2019.jpg" class="round-border" height="350">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+            </section>
+
+            <!--Bot Info-->
+            <section class>
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="col-sm-12">
+                            <p class="display-5 text-center">Our Bots</p>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-sm-12">
+                                <ul class="nav nav-tabs nav-fill" id="botTabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="arsenal-tab" data-bs-toggle="tab"
+                                            data-bs-target="#arsenal-tab-pane" type="button" role="tab"
+                                            aria-controls="arsenal-tab-pane" aria-selected="true">Arsenal</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="cherry-tab" data-bs-toggle="tab"
+                                            data-bs-target="#cherry-tab-pane" type="button" role="tab"
+                                            aria-controls="cherry-tab-pane" aria-selected="false">La Cherry</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="luigi-tab" data-bs-toggle="tab"
+                                            data-bs-target="#luigi-tab-pane" type="button" role="tab"
+                                            aria-controls="luigi-tab-pane" aria-selected="false">Luigi</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="mario-tab" data-bs-toggle="tab"
+                                            data-bs-target="#mario-tab-pane" type="button" role="tab"
+                                            aria-controls="mario-tab-pane" aria-selected="false">Mario</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="botContent">
+                                    <div class="tab-pane fade show active" id="arsenal-tab-pane" role="tabpanel"
+                                        aria-labelledby="arsenal-tab" tabindex="0">
+                                        <div class="container">
+                                            <div class="row mt-5">
+                                                <div class="col-md-12 col-lg-6">
+                                                    <div id="carousel-arsenal" class="carousel carousel-fade"
+                                                        data-bs-ride="carousel">
+                                                        <div class="carousel-inner">
+                                                            <div class="carousel-item active">
+                                                                <img src="/src/img/arsenal-1.png" class="img-fluid" alt="arsenal-1">
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img src="/src/img/arsenal-2.png" class="img-fluid" alt="arsenal-2">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 col-lg-6">
+                                                    <p class="display-5 text-center mb-0">Arsenal</p>
+                                                    <p class="display-6 text-center text-muted mt-0">12-Pounds Category</p>
+                                                    <p class="lead text-muted text-center text-md-start">A modular robot whose
+                                                        weapon can be swapped from
+                                                        a horizontal to a vertical spinner. It has a chassis made of a composite
+                                                        of titanium, Nylon X and aluminum for the side and back plate. The rest
+                                                        of the chassis is made from 3D printed parts and aluminum 6061. The
+                                                        weapons use a bar of aluminum with tool steel inserts.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="cherry-tab-pane" role="tabpanel" aria-labelledby="cherry-tab"
+                                        tabindex="0">
+                                        <div class="container">
+                                            <div class="row mt-5">
+                                                <div class="col-md-12 col-lg-6">
+                                                    <img src="/src/img/lacherry.png" class="img-fluid">
+                                                </div>
+                                                <div class="col-md-12 col-lg-6">
+                                                    <p class="display-5 text-center mb-0">La Cherry</p>
+                                                    <p class="display-6 text-center text-muted mt-0">17-Pounds</p>
+                                                    <p class="lead text-muted text-center text-md-start">A pusher robot that has
+                                                        an aluminum body with a
+                                                        reinforced steel front. It’s meant to be a practice robot to take hits
+                                                        from other reinforced battle bots that have been created by our team. It
+                                                        has a velocity of up to 15MPH and uses three wheels along with two
+                                                        protective bumpers.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="luigi-tab-pane" role="tabpanel" aria-labelledby="luigi-tab"
+                                        tabindex="0">
+                                        <div class="container">
+                                            <div class="row mt-5 align-items-center">
+                                                <div class="col-md-12 col-lg-6 d-flex justify-content-center">
+                                                    <img src="/src/img/luigi.png" class="img-fluid">
+                                                </div>
+                                                <div class="col-md-12 col-lg-6">
+                                                    <p class="display-5 text-center mb-0">Luigi</p>
+                                                    <p class="display-6 text-center text-muted mt-0">Mini-Sumo Category</p>
+                                                    <p class="lead text-muted text-center text-md-start">Our next upgrade to the
+                                                        RUMblebots’ Mini-Sumo
+                                                        family. Luigi is controlled by a Teensy 4.0 Development Board equipped
+                                                        with the ARM Cortex-M7 processor. It’s two motors are controlled by the
+                                                        TB6612FNG motor driver IC and the robot keeps track of its orientation
+                                                        with the L3GD20H gyro carrier to measure the yaw angular rates of
+                                                        rotation, all embedded in place with our custom-made printed circuit
+                                                        board. Luigi is equipped with seven Sharp GP2Y0A21YK0F analog distance
+                                                        sensors and three ML2 dual micro line sensors underneath, powered by a 3
+                                                        cell, 11.1V, 350mAh battery.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="mario-tab-pane" role="tabpanel" aria-labelledby="mario-tab"
+                                        tabindex="0">
+                                        <div class="container">
+                                            <div class="row mt-5 align-items-center">
+                                                <div class="col-md-12 col-lg-6 d-flex justify-content-center">
+                                                    <img src="/src/img/mario.png" class="img-fluid">
+                                                </div>
+                                                <div class="col-md-12 col-lg-6">
+                                                    <p class="display-5 text-center mb-0">Mario</p>
+                                                    <p class="display-6 text-center text-muted mt-0">Mini-Sumo Category</p>
+                                                    <p class="lead text-muted text-center text-md-start">RUMblebots' first
+                                                        mini-sumo robot. An autonomous
+                                                        robot controlled by an ATmega32U4 micro-controller. Mario is equipped
+                                                        with two Sharp GP2Y0A21YK0F analog distance sensors on the front and
+                                                        three ML1 micro line sensors underneath. This mini sumo is powered
+                                                        by a 3 cell, 11.1V, 350mAh battery.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="tab-pane fade" id="pills-team" role="tabpanel" aria-labelledby="pills-team-tab" tabindex="0">
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-sm-12">
+                        <p class="display-5 text-center">Meet the Team</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="tab-pane fade" id="pills-bot" role="tabpanel" aria-labelledby="pills-bot-tab" tabindex="0">
+        </div>
+    </div>
     <!--Scripts-->
     <script src="/src/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

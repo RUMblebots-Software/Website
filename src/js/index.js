@@ -92,3 +92,14 @@ setTimeout(function(){
     cursor.classList.add("cursor-static");
     startTyping(0);
 }, 1000);
+
+// allows for tab change at navbar button press
+const triggerTabList = document.querySelectorAll('#myTab button')
+triggerTabList.forEach(triggerEl => {
+  const tabTrigger = new bootstrap.Tab(triggerEl)
+
+  triggerEl.addEventListener('click', event => {
+    event.preventDefault()
+    tabTrigger.show()
+  })
+})

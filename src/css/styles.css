@@ -279,4 +279,8 @@
 
 .round-border{
     border-radius: 5px;
-  }
+}
+
+.nav-pills .nav-link.active{
+    background-color:#217600;
+}
