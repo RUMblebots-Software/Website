@@ -103,3 +103,9 @@ triggerTabList.forEach(triggerEl => {
     tabTrigger.show()
   })
 })
+
+const triggerEl = document.querySelector('#myTab button[data-bs-target="#team"]')
+bootstrap.Tab.getInstance(triggerEl).show();
+
+const triggerE2 = document.querySelector('#myTab button[data-bs-target="#bots"]')
+bootstrap.Tab.getInstance(triggerEl).show()
