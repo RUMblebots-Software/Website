@@ -5,10 +5,10 @@ module.exports = {
     entry: './src/js/index.js',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'public'),
     },
     devServer: {
-        static: path.resolve(__dirname, 'dist')
+        static: path.resolve(__dirname, 'public')
     },
     plugins: [new HtmlWebpackPlugin({ template: './src/html/index.html' })],
     module: {

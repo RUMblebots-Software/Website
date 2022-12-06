@@ -1,4 +1,4 @@
-// UPRM RUMblebots Combact Robots Team 
+// UPRM RUMblebots Combact Robots Team
 import html from "../html/index.html";
 
 //Import our custom scss
