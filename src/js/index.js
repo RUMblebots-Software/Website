@@ -5,6 +5,7 @@ import html from "../html/index.html";
 import '../scss/styles.scss'
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
+import { method } from "lodash";
 
 // Navbar fades up on scroll
 /*
@@ -23,7 +24,6 @@ window.onscroll = function(){
 var typeWriter = document.getElementById('typewriter');
 var cursor = document.getElementById('cursor');
 var textArray = ["design.", "manufacture.", "code.", "test.", "optimize.", "market.", "RUMBLE."];
-
 
 // backspace effect function
 function delWriter(text, i, cb){

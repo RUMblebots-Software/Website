@@ -12,7 +12,15 @@ module.exports = {
         liveReload: true,
         hot: true
     },
-    plugins: [new HtmlWebpackPlugin({ template: './src/html/index.html' })],
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/html/index.html',
+            filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/meet-the-team.html',
+            filename: 'meet-the-team.html'
+        })],
     module: {
         rules: [
             {
@@ -46,7 +54,7 @@ module.exports = {
                         loader: 'sass-loader',
                         options: {
                             warnRuleAsWarning: true,
-                          },
+                        },
                     }
                 ]
             },
@@ -63,5 +71,5 @@ module.exports = {
 
         ]
     },
-    ignoreWarnings:[(warning) => true]
+    ignoreWarnings: [(warning) => true]
 }
