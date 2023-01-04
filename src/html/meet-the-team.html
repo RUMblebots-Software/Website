@@ -24,26 +24,106 @@
     <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/716acecbd2.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <!--Navigation Bar-->
     <nav class="navbar navbar-expand-md bg-white" id="navbar">
-        <div class="container-fluid">
-            <a class="navbar-brand d-none d-md-block" href="index.html">
-                <img id="logo" src="/src/img/rumblebots.png" height="70" alt="navbar-logo">
-            </a>
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="meet-the-team.html">Meet the Team</a>
-                </li>
-            </ul>
-            <a class="navbar-brand d-none d-md-block" href="https://www.uprm.edu/portada/">
-                <img src="/src/img/rum_upr_web.jpg" class="uprm-web-logo">
-            </a>
+        <div class="container-fluid d-flex flex-row">
+            <div class="flex-column">
+                <a class="navbar-brand d-none d-md-block" href="index.html">
+                    <img id="logo" src="/src/img/rumblebots.png" height="70" alt="navbar-logo">
+                </a>
+            </div>
+            <div class="flex-column flex-fill">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="meet-the-team.html">Meet the Team</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex-column">
+                <a class="navbar-brand d-none d-md-block" href="https://www.uprm.edu/portada/">
+                    <img src="/src/img/rum_upr_web.jpg" class="uprm-web-logo">
+                </a>
+            </div>
         </div>
     </nav>
+
+    <section>
+        <div class="text-center m-5">
+            <h1 class="display-3">Meet the RumbleBots Team!</h1>
+            <h6 class="text-muted">The brains behind the bots.</h6>
+        </div>
+    </section>
+
+    <!--Design and Manufacturing Team-->
+    <section>
+            <div id="manufacturing" class="container">
+                <div class="p-3">
+                    <h3 class="text-center">Design and Manufacturing Team</h3>
+                </div>
+            </div>
+    </section>
+
+    <!--Electronics Team-->
+    <section>
+        <div id="electronics" class="container">
+            <div class="p-3">
+                <h3 class="text-center">Electronics Team</h3>
+            </div>
+        </div>
+    </section>
+
+    <!--Software Team-->
+    <section>
+        <div id="software" class="container">
+            <div class="p-3">
+                <h3 class="text-center">Software Team</h3>
+            </div>
+        </div>
+    </section>
+
+    <!--Logistics Team-->
+    <section>
+        <div id="Logistics" class="container">
+            <div class="p-3">
+                <h3 class="text-center">Logistics Team</h3>
+            </div>
+        </div>
+    </section>
 
     <!--Scripts-->
     <script src="/src/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <style>
+        #manufacturing, #software, #Logistics, #electronics {
+            background-size: cover;
+            border-radius: 10px;
+            width: 60vw;
+            height: 60vh;
+            margin: auto;
+            margin-top: 5vw;
+            margin-bottom: 5vw;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        #manufacturing {
+            background-image: url(https://wallpapercave.com/wp/wp9425829.jpg);        
+        }
+        #electronics{
+            background-image: url(https://i.pinimg.com/originals/89/7f/c4/897fc49983580ffca4a4103ae35e3067.jpg);
+
+        }
+        #software {
+            background-image: url(https://images3.alphacoders.com/689/689312.jpg);
+        }
+        #Logistics {
+            background-image: url(https://images.hdqwalls.com/wallpapers/snow-mountains-landscape-4k-q5.jpg);
+        }
+        h3 {
+            position: absolute;
+            color: white;
+        }
+    </style>
 </body>
+
 </html>
