@@ -22,6 +22,7 @@ $background-color_1: #217600;
 	50% {
 		border-left: 4px solid #48955f;
 	}
+
 	50% {
 		border-left: 4px solid transparent;
 	}
@@ -31,25 +32,30 @@ $background-color_1: #217600;
 	50% {
 		border-left: 4px solid #48955f;
 	}
+
 	50% {
 		border-left: 4px solid transparent;
 	}
 }
+
 /*Make an image go from truly trasnaprent to visible*/
 @keyframes fadeIn {
 	from {
 		opacity: 0;
 	}
+
 	to {
 		opacity: 1;
 	}
 }
+
 /*Fade In Animation*/
 /*Make an image go from truly trasnaprent to visible*/
 @keyframes fadeIn {
 	from {
 		opacity: 0;
 	}
+
 	to {
 		opacity: 1;
 	}
@@ -59,54 +65,67 @@ $background-color_1: #217600;
 	color: $color_1;
 	color: $color_1;
 }
+
 .bg-verde-colegial {
 	background-color: $background-color_1;
 	background-color: $background-color_1;
 }
+
 .grey-rumble {
 	color: $color_2;
 	color: $color_2;
 }
+
 .green-dark-rumble {
 	color: $color_3;
 	color: $color_3;
 }
+
 .green-light-rumble {
 	color: $color_4;
 	color: $color_4;
 }
+
 .yellow-lightning {
 	color: $color_5;
 	color: $color_5;
 }
+
 .green-logistics {
 	color: $color_6;
 	color: $color_6;
 }
+
 .green-matrix {
 	color: $color_7;
 	color: $color_7;
 }
+
 .blue-facebook {
 	color: $color_8;
 	color: $color_8;
 }
+
 .blue-twitter {
 	color: $color_9;
 	color: $color_9;
 }
+
 .blue-linkedin {
 	color: $color_10;
 	color: $color_10;
 }
+
 .black-github {
 	color: $color_11;
 	color: $color_11;
 }
+
 .pink-instagram {
 	color: $color_12;
 	color: $color_12;
 }
+
 .uprm-web-logo {
 	height: 59px;
 	width: 193px;
@@ -115,15 +134,17 @@ $background-color_1: #217600;
 	width: 193px;
 	margin-right: 0px;
 }
+
 .gradient {
 	-webkit-mask-image: linear-gradient(to left, black 75%, transparent 99%);
 	mask-image: linear-gradient(to left, black 75%, transparent 96%);
 	-webkit-mask-image: linear-gradient(to left, black 75%, transparent 97%);
 	mask-image: linear-gradient(to left, black 75%, transparent 96%);
 }
+
 .bg-gradient-white {
-	background-image: linear-gradient(180deg,#f0f1f3 0,#fff);
-	background-image: linear-gradient(180deg,#f0f1f3 0,#fff);
+	background-image: linear-gradient(180deg, #f0f1f3 0, #fff);
+	background-image: linear-gradient(180deg, #f0f1f3 0, #fff);
 }
 
 /* BS Container with NO padding*/
@@ -143,10 +164,12 @@ $background-color_1: #217600;
 	padding-left: 0px;
 	padding-right: 0px;
 }
+
 #navbar {
 	transition: top 0.5s;
 	transition: top 0.5s;
 }
+
 #logo {
 	-webkit-transition-property: all;
 	-webkit-transition-duration: 0.3s;
@@ -154,40 +177,165 @@ $background-color_1: #217600;
 	-webkit-transition-property: all;
 	-webkit-transition-duration: 0.3s;
 	-webkit-transition-timing-function: ease;
+
 	&:hover {
 		transform: scale(1.2);
 		transform: scale(1.2);
 	}
 }
+
 .cursor-blink {
 	border-left: 4px solid #48955f;
 	animation: blink 1.5s infinite;
 	border-left: 4px solid #48955f;
 	animation: blink 1.5s infinite;
 }
+
 .cursor-static {
 	border-left: 4px solid #48955f;
 	border-left: 4px solid #48955f;
 }
+
 .fade-in {
 	animation: fadeIn ease-in 1;
 	animation-duration: 1s;
 	animation: fadeIn ease-in 1;
 	animation-duration: 1s;
 }
+
 .text-justify {
 	text-align: justify;
 	text-justify: auto;
 	text-align: justify;
 	text-justify: auto;
 }
+
 .round-border {
 	border-radius: 5px;
 	border-radius: 5px;
 }
+
 @media screen and (min-width: 992px) {
 	.parallelogram {
 		clip-path: polygon(25% 0%, 100% 0%, 81% 100%, 0% 100%);
 		clip-path: polygon(25% 0%, 100% 0%, 81% 100%, 0% 100%);
+	}
+}
+
+// Meet The Team page
+
+.card-inner {
+	width: 60vw;
+	height: 60vh;
+	margin: auto;
+	margin-top: 5vw;
+	margin-bottom: 5vw;
+	position: relative;
+	cursor: pointer;
+	transition: transform 0.5s;
+	transform-style: preserve-3d;
+}
+
+.card-inner:hover {
+	transform: scale(1.02);
+}
+
+.card-inner.is-flipped {
+	transform: rotateY(180deg);
+}
+
+.card-face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card-face--back {
+	display: flex;
+	align-items: center;
+	transform: rotateY(180deg);
+}
+
+.content-back {
+	width: 50%;
+	height: 50%;
+	text-align: justify;
+	margin: auto;
+}
+
+#electronics {
+	background-size: cover;
+	background-position: center;
+	background-image: url('../img/electronics-team.jpg');
+}
+
+#manufacturing {
+	background-size: cover;
+	background-position: center;
+	background-image: url('../img/manufacturing-team.jpg');
+}
+
+#software {
+	background-size: cover;
+	background-position: center;
+	background-image: url('../img/software-team.jpg');
+}
+
+#logistics {
+	background-size: cover;
+	background-position: center;
+	background-image: url('../img/logistics-team.jpg');
+}
+
+#captains {
+	background-size: cover;
+	background-position: center;
+	background-image: url('../img/captains-team.jpg');
+}
+
+.team-title {
+	position: absolute;
+	text-align: right;
+	color: white;
+}
+
+// tablet
+
+@media screen and (max-width: 1024px) {
+	.card-inner {
+		width: 70vw;
+		height: 60vh;
+	}
+}
+
+// landscape orientation on phone
+
+@media screen and (max-width: 767px) {
+	.card-inner {
+		width: 80vw;
+		height: 60vh;
+	}
+}
+
+// portrait orientation on phone
+
+@media screen and (max-width: 500px) {
+	.card-inner {
+		width: 80vw;
+		height: 40vh;
+		margin-top: 10vh;
+		margin-bottom: 10vh;
+	}
+
+	.content-back {
+		width: 70%;
+		top: 30%;
+		padding: 0% 4%;
+		overflow: scroll;
 	}
 }
