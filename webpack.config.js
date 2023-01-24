@@ -20,7 +20,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/html/meet-the-team.html',
             filename: 'meet-the-team.html'
-        })],
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/apply-now.html',
+            filename: 'apply-now.html'
+        })
+    ],
     module: {
         rules: [
             {
