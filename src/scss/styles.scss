@@ -256,11 +256,17 @@ $background-color_1: #217600;
 	transform: rotateY(180deg);
 }
 
+.back-title {
+	text-align: left;
+}
+
 .content-back {
-	width: 50%;
-	height: 50%;
+	width: 65%;
+	height: 70%;
+	overflow: auto;
 	text-align: justify;
 	margin: auto;
+	padding: 5%;
 }
 
 #electronics {
@@ -331,6 +337,5 @@ $background-color_1: #217600;
 		width: 70%;
 		top: 30%;
 		padding: 0% 4%;
-		overflow: scroll;
 	}
 }
