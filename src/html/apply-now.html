@@ -24,7 +24,9 @@
     <link rel="icon" href="/src/img/rumblebots.png">
 
     <!--Font Awesome-->
+    <script src="/src/js/index.js"></script>
     <script src="https://kit.fontawesome.com/716acecbd2.js" crossorigin="anonymous"></script>
+    <script src="https:www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
 
 
 </head>
@@ -72,45 +74,6 @@
             <button type="submit" class="btn btn-success">Submit Application</button>
         </form>
     </div>
-    <script type="text/javascript">
-        import { initializeApp } from "firebase/app"
-        import { getDatabase, ref, set } from "firebase/database";
-        import { getAnalytics } from "firebase/analytics"
-        //Web APP firebase config
-        const firebaseConfig = {
-            apiKey: "AIzaSyDHjvrenveN0OBqC167mRxsmxWN7D4M6Wc",
-            authDomain: "rumblebots-website.firebaseapp.com",
-            projectId: "rumblebots-website",
-            storageBucket: "rumblebots-website.appspot.com",
-            messagingSenderId: "445812151859",
-            appId: "1:445812151859:web:b409a58e9f7eb869c57546",
-            measurementId: "G-D8XD7NLTM7",
-            databaseURL: "https://rumblebots-website-default-rtdb.firebaseio.com/"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        const db = getDatabase(app);
-        
-
-
-    
-        var application = document.getElementById("application")
-        application.addEventListener("submit", function (event) {const writeUserData = (name, email, bio) => {
-            set(ref(db, 'applications/' + email), {
-                username: name,
-                email: email,
-                bio: bio
-            });    }
-            event.preventDefault();
-            var name = document.getElementById("nameInput").value
-            console.log(name);
-            var email = document.getElementById("emailInput").value
-            console.log(email)
-            var bio = document.getElementById("bioInput").value
-            console.log(bio)
-            writeUserData(name, email, bio);
-        })
-    </script>
 </body>
 
 
