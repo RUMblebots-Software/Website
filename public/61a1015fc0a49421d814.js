@@ -1,0 +1,1 @@
+var application=document.getElementById("application");application.addEventListener("submit",(function(e){e.preventDefault();var t=document.getElementById("nameInput").value;console.log(t);var n=document.getElementById("emailInput").value;console.log(n);var l=document.getElementById("bioInput").value;console.log(l)}));
