@@ -32,10 +32,27 @@
 <body>
     <!--Navigation Bar-->
     <nav class="navbar navbar-expand-md bg-white" id="navbar">
-        <div class="mx-3">
-            <a class="navbar-brand d-none d-md-block" href="index.html">
-                <img id="logo" src="/src/img/rumblebots.png" height="70" alt="navbar-logo">
-            </a>
+        <div class="container-fluid d-flex flex-row">
+            <div class="flex-column">
+                <a class="navbar-brand d-none d-md-block" href="index.html">
+                    <img id="logo" src="/src/img/rumblebots.png" height="70" alt="navbar-logo">
+                </a>
+            </div>
+            <div class="flex-column flex-fill">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="meet-the-team.html">Meet the Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="apply-now.html">Apply Now!</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex-column">
+                <a class="navbar-brand d-none d-md-block" href="https://www.uprm.edu/portada/">
+                    <img src="/src/img/rum_upr_web.jpg" class="uprm-web-logo">
+                </a>
+            </div>
         </div>
         <button class="mx-3 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

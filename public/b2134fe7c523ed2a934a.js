@@ -1,0 +1,1 @@
+function sumba(e){e.preventDefault();var t=getElementVal("nameInput"),n=getElementVal("emailInput"),l=getElementVal("bioInput");console.log(t,n,l),save(t,n,l)}console.log("hello"),document.getElementById("application").addEventListener("submit",sumba);const getElementVal=e=>document.getElementById(e).value;
