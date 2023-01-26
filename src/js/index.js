@@ -14,17 +14,15 @@ import logistics from "../img/logistics-team.jpg";
 import captains from "../img/captains-team.jpg";
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs, where, query, onSnapshot, setDoc,doc } from 'firebase/firestore';
-// import { query } from "express";
+
+// THESE ARE FOR LATER!!!
+// import { query } from "express";     
 // import { initializeApp } from "firebase-admin";
 
-// const {initializeApp} = require('../../firebase-admin/app');
-// const {initializeApp, applicationDefault, cert} = require('firebase-admin');
-// const {getFirestore, Timestamp, FieldValue} = require('firebase-admin/firestore')
-
-// initializeApp();
 
 
 
+// Configuration for firebase database
 const firebaseConfig = {
     apiKey: "AIzaSyDHjvrenveN0OBqC167mRxsmxWN7D4M6Wc",
     authDomain: "rumblebots-website.firebaseapp.com",
@@ -36,64 +34,11 @@ const firebaseConfig = {
     databaseURL: "https://rumblebots-website-default-rtdb.firebaseio.com/"
 };
 
+console.log("It accesced the JS file");
+
+// initlize App and get Firestore
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-
-const docRef = collection(db, "applications");
-
-console.log(docRef);
-
-
-
-
-// docRef.forEach((doc)=>{
-//     console.log(doc.id, "=>", doc.data());
-// })
-
-// firebase.initializeApp(firebaseConfig);
-
-// let database = firebase.database();
-
-// var contactform = firebase.database().ref("application");
-
-
-
-// const app = initializeApp(firebaseConfig);
-// const db = getFirestore(app);
-// var application = document.getElementById("application")
-
-// application.addEventListener("submit", async function (e) {
-//     e.preventDefault();
-//     var name = document.getElementById("nameInput").value;
-//     console.log(name);
-//     var email = document.getElementById("emailInput").value;
-//     console.log(email);
-//     var bio = document.getElementById("bioInput").value;
-//     console.log(bio);
-//     try {
-//         const docRef = await addDoc(collection(db, "applications"), {
-//             name: "Ada",
-//             email: "Lovelace",
-//             bio: "1815"
-//         });
-//         console.log("Document written with ID: ", docRef.id);
-//     } catch (e) {
-//         console.error("Error adding document:",e);
-//     }
-// })
-
-// Navbar fades up on scroll
-
-// var prevScrollpos = window.pageYOffset;
-// window.onscroll = function(){
-//     var currentScrollPos = window.pageYOffset;
-//     if(prevScrollpos > currentScrollPos){
-//         document.getElementById('navbar').style.top = "0";
-//     }else{
-//         document.getElementById('navbar').style.top = '-100px';
-//     }
-//     prevScrollpos = currentScrollPos;
-// }
 
 
 document.querySelectorAll('.card-inner').forEach((card) => {
@@ -101,12 +46,15 @@ document.querySelectorAll('.card-inner').forEach((card) => {
         card.classList.toggle('is-flipped')
     })
 })
-console.log("hi");
 
 
+// function that listens for the submit button
 var application = document.getElementById("application");
 application.addEventListener("submit", async function (event) {
+
     event.preventDefault();
+
+    // takes information from the html forum and stores it into a var
     var name = document.getElementById("nameInput").value
     console.log(name);
     var email = document.getElementById("emailInput").value
@@ -114,22 +62,15 @@ application.addEventListener("submit", async function (event) {
     var bio = document.getElementById("bioInput").value
     console.log(bio);
 
-
+    // conversion of data from var 
     const docdata = {
         name: name,
         email: email,
         bio: bio
     };
     
+    // sets New doc or collection whit all the info setDoc(doc(db, <collection>, <name of doc>), <dataConversion>)
     await setDoc(doc(db, "applications", email), docdata);
-    
-
-
-    // await docRef.set({
-    //     first: 'Ada',
-    //     last: 'Lovance',
-    //     born: 1815
-    // });
 
     
     
@@ -194,9 +135,9 @@ function startTyping(i){
 };
 
 
-function startImageFadeIn(img){
+// function startImageFadeIn(img){
     
-}
+// }
 
 
 
@@ -207,21 +148,3 @@ setTimeout(function(){
     cursor.classList.add("cursor-static");
     startTyping(0);
 }, 1000);
-
-// document.getElementById("application").addEventListener("submit", sumba);
-
-// function sumba(e) {
-//     e.preventDefault();
-
-//     // var name = getElementVal("nameInput");
-//     // var email = getElementVal("emailInput");
-//     // var msg = getElementVal("bioInput");
-
-//     console.log("me cago");
-
-//     // save(name, email, msg);
-// }
-
-const getElementVal = (id) =>{
-    return document.getElementById(id).value;
-}  
