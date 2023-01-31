@@ -3,7 +3,7 @@
 
 //Import our custom scss
 import '../scss/styles.scss';
-import { bootstrap } from 'bootstrap';
+import { Carousel } from 'bootstrap';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, setDoc, doc } from 'firebase/firestore';
 
@@ -37,7 +37,7 @@ document.querySelectorAll('.card-inner').forEach((card) => {
 if (document.querySelector('#sponsorCarousel')) {
     const Mycarousel = document.querySelector('#sponsorCarousel')
 
-    const carousel = new bootstrap.Carousel(Mycarousel, {
+    const carousel = new Carousel(Mycarousel, {
         interval: 6000,
         touch: true
     })
