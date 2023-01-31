@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en">
+<html lang="en" style="min-height: 100%;">
 
 <head>
     <!--Google Analytics-->
@@ -31,55 +31,53 @@
 
 </head>
 
-<body>
+<body style="min-height: 100%;">
     <!--Navigation Bar-->
     <nav class="navbar navbar-expand-md bg-white" id="navbar">
-        <div class="container-fluid d-flex flex-row">
-            <div class="flex-column">
-                <a class="navbar-brand d-none d-md-block" href="index.html">
-                    <img id="logo" src="/src/img/rumblebots.png" height="70" alt="navbar-logo">
-                </a>
-            </div>
-            <div class="flex-column flex-fill">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="meet-the-team.html">Meet the Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="meet-the-bots.html">Meet the Bots</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="apply-now.html">Apply Now!</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="flex-column">
-                <a class="navbar-brand d-none d-md-block" href="https://www.uprm.edu/portada/">
-                    <img src="/src/img/rum_upr_web.jpg" class="uprm-web-logo">
-                </a>
-            </div>
+        <a class="mx-3 navbar-brand d-none d-md-block" href="index.html">
+            <img id="logo" src="/src/img/rumblebots.png" height="70" alt="navbar-logo">
+        </a>
+        <button class="mx-3 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse m-3" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="meet-the-team.html">Meet the Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="meet-the-team.html">Meet the Bots</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="meet-the-team.html">Apply Now!</a>
+                </li>
+            </ul>
         </div>
+        <a class="navbar-brand d-none d-md-block" href="https://www.uprm.edu/portada/">
+            <img src="/src/img/rum_upr_web.jpg" class="uprm-web-logo">
+        </a>
     </nav>
-    <div class="container" style="margin-top: 5%; width: 50%;margin-bottom: 5%;">
+    <div class="container" style="margin-top: 5%; width: 50%;margin-bottom: 10%;">
         <form id="application">
             <div class="mb-3">
                 <label for="nameInput" class="form-label" aria-required="true">Full Name</label>
-                <input type="text" class="form-control" id="nameInput" aria-describedby="nameHelp">
+                <input type="text" class="form-control" id="nameInput" aria-describedby="nameHelp" required>
             </div>
             <div class="mb-3">
-                <label for="emailInput" class="form-label" aria-required="true">Email</label>
-                <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
+                <label for="emailInput" class="form-label" aria-required="true">Enter your E-mail</label>
+                <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" required>
             </div>
             <div class="mb-3">
-                <label for="bioInput" class="form-label" aria-required="true">Bio</label>
-                <textarea class="form-control" id="bioInput" aria-label="Bio"></textarea>
+                <label for="bioInput" class="form-label" aria-required="true">Tell us a bit about your self</label>
+                <textarea class="form-control" id="bioInput" aria-label="Bio" required></textarea>
             </div>
             <button type="submit" class="btn btn-success">Submit Application</button>
         </form>
     </div>
 </body>
 <!--Footer-->
-<footer>
+<footer style="min-height: 100%;">
     <div class="container-fluid text-center text-md-start">
         <div class="row p-5 bg-light d-flex flex-sm-row-reverse">
             <div class="col-xs-12 col-md-6 text-center">
@@ -121,5 +119,4 @@
         </div>
     </div>
 </footer>
-
 </html>
