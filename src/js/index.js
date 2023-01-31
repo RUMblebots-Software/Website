@@ -2,9 +2,16 @@
 import html from "../html/index.html";
 
 //Import our custom scss
-import '../scss/styles.scss'
+import '../scss/styles.scss';
 // Import all of Bootstrap's JS
-import * as bootstrap from 'bootstrap'
+import * as bootstrap from 'bootstrap';
+import { method } from "lodash";
+
+import software from "../img/software-team.jpg";
+import manufacturing from "../img/manufacturing-team.jpg";
+import electronics from "../img/electronics-team.jpg";
+import logistics from "../img/logistics-team.jpg";
+import captains from "../img/captains-team.jpg";
 
 // Navbar fades up on scroll
 /*
@@ -20,10 +27,16 @@ window.onscroll = function(){
 }
 */
 
+document.querySelectorAll('.card-inner').forEach((card) => {
+    card.addEventListener('click', (e) => {
+        card.classList.toggle('is-flipped')
+    })
+})
+
+
 var typeWriter = document.getElementById('typewriter');
 var cursor = document.getElementById('cursor');
 var textArray = ["design.", "manufacture.", "code.", "test.", "optimize.", "market.", "RUMBLE."];
-
 
 // backspace effect function
 function delWriter(text, i, cb){

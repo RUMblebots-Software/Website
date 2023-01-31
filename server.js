@@ -21,5 +21,6 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const analytics = getAnalytics(app);
 
-
-
+// expressjs backend
+const express = require('express')
+const server = express()
