@@ -70,7 +70,6 @@ if (document.getElementById("application")) {
 }
 
 
-
 if (document.getElementById("typewriter")) {
     var typeWriter = document.getElementById('typewriter');
     var cursor = document.getElementById('cursor');

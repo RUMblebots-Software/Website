@@ -61,15 +61,15 @@
         <form id="application">
             <div class="mb-3">
                 <label for="nameInput" class="form-label" aria-required="true">Full Name</label>
-                <input type="text" class="form-control" id="nameInput" aria-describedby="nameHelp">
+                <input type="text" class="form-control" id="nameInput" aria-describedby="nameHelp" required>
             </div>
             <div class="mb-3">
-                <label for="emailInput" class="form-label" aria-required="true">Email</label>
-                <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
+                <label for="emailInput" class="form-label" aria-required="true">Enter your E-mail</label>
+                <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" required>
             </div>
             <div class="mb-3">
-                <label for="bioInput" class="form-label" aria-required="true">Bio</label>
-                <textarea class="form-control" id="bioInput" aria-label="Bio"></textarea>
+                <label for="bioInput" class="form-label" aria-required="true">Tell us a bit about your self</label>
+                <textarea class="form-control" id="bioInput" aria-label="Bio" required></textarea>
             </div>
             <button type="submit" class="btn btn-success">Submit Application</button>
         </form>
