@@ -27,6 +27,8 @@
     <script src="/src/js/index.js"></script>
     <script src="https://kit.fontawesome.com/716acecbd2.js" crossorigin="anonymous"></script>
     <script src="https:www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-growl/1.0.0/jquery.bootstrap-growl.min.js"></script>
 
 
 </head>
@@ -71,7 +73,13 @@
                 <label for="bioInput" class="form-label" aria-required="true">Tell us a bit about your self</label>
                 <textarea class="form-control" id="bioInput" aria-label="Bio" required></textarea>
             </div>
-            <button type="submit" class="btn btn-success">Submit Application</button>
+            <div class="mb-3">
+                <label for="fileInput" class="form-label" aria-required="true">Upload your resume</label>
+                <input type="file" class="form-control" id="fileInput" aria-describedby="fileHelp" required>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-success">Submit Application</button>
+            </div>
         </form>
     </div>
 </body>

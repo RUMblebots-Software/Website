@@ -57,7 +57,8 @@ if (document.getElementById("application")) {
         console.log(email)
         var bio = document.getElementById("bioInput").value
         console.log(bio);
-
+        var res = document.getElementById("fileInput").value
+        console.log(res);
         //Application form schema for the database
         const docdata = {
             name: name,
@@ -66,9 +67,27 @@ if (document.getElementById("application")) {
         };
         //Sends the data to the database (Firebase Cloud)
         await setDoc(doc(db, "applications", email), docdata);
-    });
+
+        myclear();
+        alert();
+        setTimeout(() => {window.location.replace('./index.html')},1500);
+        
+    }); 
 }
 
+function myclear(){
+    document.getElementById("application").reset();
+}
+
+function alert(){
+    $.bootstrapGrowl("Thank you for submiting to Rumblebots",{
+        type: "success",
+        align: "center",
+        delay: 3000,
+        allow_dismiss: false,
+        stackup_spacing: 10
+    });
+}
 
 if (document.getElementById("typewriter")) {
     var typeWriter = document.getElementById('typewriter');
