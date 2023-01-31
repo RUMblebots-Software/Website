@@ -1,10 +1,9 @@
 // UPRM RUMblebots Combact Robots Team
 //Authored by Ediemar Valentin, Juan E. Quintana: juan.quintana5@upr.edu, Oscar Flores: oscar.flores@upr.edu, Yahid Diaz: yahid.diaz@upr.edu
-import html from "../html/index.html";
 
 //Import our custom scss
 import '../scss/styles.scss';
-
+import { bootstrap } from 'bootstrap';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, setDoc, doc } from 'firebase/firestore';
 
@@ -35,6 +34,17 @@ document.querySelectorAll('.card-inner').forEach((card) => {
     })
 })
 
+if (document.querySelector('#sponsorCarousel')) {
+    const Mycarousel = document.querySelector('#sponsorCarousel')
+
+    const carousel = new bootstrap.Carousel(Mycarousel, {
+        interval: 6000,
+        touch: true
+    })
+
+}
+
+
 //This only happens when we are on the apply now page
 if (document.getElementById("application")) {
     //This gets the application form data and prepares it for the database
@@ -61,67 +71,69 @@ if (document.getElementById("application")) {
 
 
 
+if (document.getElementById("typewriter")) {
+    var typeWriter = document.getElementById('typewriter');
+    var cursor = document.getElementById('cursor');
+    var textArray = ["design.", "manufacture.", "code.", "test.", "optimize.", "market.", "RUMBLE."];
 
-var typeWriter = document.getElementById('typewriter');
-var cursor = document.getElementById('cursor');
-var textArray = ["design.", "manufacture.", "code.", "test.", "optimize.", "market.", "RUMBLE."];
+    // backspace effect function
+    function delWriter(text, i, cb) {
+        if (i >= 0) {
+            typeWriter.innerHTML = text.substring(0, i--);
+            // random number to emulate backspace hitting
+            var timeBack = 10 + Math.random() * 100;
+            cursor.classList.remove("cursor-blink");
+            cursor.classList.add("cursor-static");
+            setTimeout(function () {
+                delWriter(text, i, cb);
+            }, timeBack);
+        } else if (typeof cb == 'function') {
+            cursor.classList.remove("cursor-static");
+            cursor.classList.add("cursor-blink");
+            setTimeout(cb, 1000);
+        }
+    };
 
-// backspace effect function
-function delWriter(text, i, cb) {
-    if (i >= 0) {
-        typeWriter.innerHTML = text.substring(0, i--);
-        // random number to emulate backspace hitting
-        var timeBack = 10 + Math.random() * 100;
+    // typing effect function
+    function typer(text, i, cb) {
+        if (i < text.length + 1) {
+            typeWriter.innerHTML = text.substring(0, i++);
+            // random number to emulate keyword hitting
+            var timeType = 150 - Math.random() * 100;
+            cursor.classList.remove("cursor-blink");
+            cursor.classList.add("cursor-static");
+            setTimeout(function () {
+                typer(text, i++, cb)
+            }, timeType);
+        } else if (i === text.length + 1) {
+            cursor.classList.remove("cursor-static");
+            cursor.classList.add("cursor-blink");
+            setTimeout(function () {
+                delWriter(text, i, cb)
+            }, 2000);
+        }
+    };
+
+    // Writer function
+    function startTyping(i) {
+        if (typeof textArray[i] == "undefined") {
+            setTimeout(function () {
+                startTyping(0);
+            }, 1000);
+        } else if (i < textArray[i].length + 1) {
+            typer(textArray[i], 0, function () {
+                startTyping(i + 1);
+            });
+        }
+    };
+
+
+    // wait one second before starting the typer
+    cursor.classList.add("cursor-blink");
+    setTimeout(function () {
         cursor.classList.remove("cursor-blink");
         cursor.classList.add("cursor-static");
-        setTimeout(function () {
-            delWriter(text, i, cb);
-        }, timeBack);
-    } else if (typeof cb == 'function') {
-        cursor.classList.remove("cursor-static");
-        cursor.classList.add("cursor-blink");
-        setTimeout(cb, 1000);
-    }
-};
+        startTyping(0);
+    }, 1000);
 
-// typing effect function
-function typer(text, i, cb) {
-    if (i < text.length + 1) {
-        typeWriter.innerHTML = text.substring(0, i++);
-        // random number to emulate keyword hitting
-        var timeType = 150 - Math.random() * 100;
-        cursor.classList.remove("cursor-blink");
-        cursor.classList.add("cursor-static");
-        setTimeout(function () {
-            typer(text, i++, cb)
-        }, timeType);
-    } else if (i === text.length + 1) {
-        cursor.classList.remove("cursor-static");
-        cursor.classList.add("cursor-blink");
-        setTimeout(function () {
-            delWriter(text, i, cb)
-        }, 2000);
-    }
-};
-
-// Writer function
-function startTyping(i) {
-    if (typeof textArray[i] == "undefined") {
-        setTimeout(function () {
-            startTyping(0);
-        }, 1000);
-    } else if (i < textArray[i].length + 1) {
-        typer(textArray[i], 0, function () {
-            startTyping(i + 1);
-        });
-    }
-};
-
-
-// wait one second before starting the typer
-cursor.classList.add("cursor-blink");
-setTimeout(function () {
-    cursor.classList.remove("cursor-blink");
-    cursor.classList.add("cursor-static");
-    startTyping(0);
-}, 1000);
+}
