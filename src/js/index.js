@@ -6,6 +6,7 @@ import '../scss/styles.scss';
 import { Carousel } from 'bootstrap';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, setDoc, doc } from 'firebase/firestore';
+import { getStorage, ref, uploadBytes, uploadString } from "firebase/storage";
 
 
 
@@ -18,14 +19,12 @@ const firebaseConfig = {
     messagingSenderId: "445812151859",
     appId: "1:445812151859:web:b409a58e9f7eb869c57546",
     measurementId: "G-D8XD7NLTM7",
-    databaseURL: "https://rumblebots-website-default-rtdb.firebaseio.com/"
+    databaseURL: "https://rumblebots-website-default-rtdb.firebaseio.com/",
+    storageBucket: "gs://rumblebots-website.appspot.com/"
 };
 //Initialize the firebase system with the config above
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-
-
-
 
 //Listens for click to flip the cards on the meet the teams page
 document.querySelectorAll('.card-inner').forEach((card) => {
@@ -44,8 +43,11 @@ if (document.querySelector('#sponsorCarousel')) {
 
 }
 
+// firebase storage
+const storage = getStorage();
+
 // encoder
-const toBase64 = file => new Promise((resolve, reject) => {
+const encode = file => new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => resolve(reader.result);
@@ -59,6 +61,7 @@ if (document.getElementById("application")) {
     application.addEventListener("submit", async function (event) {
         event.preventDefault();
 
+        
         var name = document.getElementById("nameInput").value
         console.log(name);
         var email = document.getElementById("emailInput").value
@@ -66,21 +69,30 @@ if (document.getElementById("application")) {
         var bio = document.getElementById("bioInput").value
         console.log(bio);
         let file = document.getElementById('fileInput').files[0];
-        await toBase64(file)
+        
+        // encoding
+        await encode(file)
         .then(res => {
-            console.log(res);
+            console.log('File encoded!');
             file = res;
         })
         .catch(err => {
             console.log(err);
         });
+        
+        // uploading encoded file
+        const storageRef = ref(storage, `app_uploads/${name}'s Upload`);
+        await uploadString(storageRef, file)
+        .then((snapshot) => {
+            console.log('Uploaded file to storage!');
+        })
 
         //Application form schema for the database
         const docdata = {
             name: name,
             email: email,
             bio: bio,
-            file: file
+            file: storageRef.fullPath,
         };
         //Sends the data to the database (Firebase Cloud)
         await setDoc(doc(db, "applicationV2", email), docdata);
