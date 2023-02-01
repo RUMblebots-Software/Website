@@ -70,7 +70,7 @@ if (document.getElementById("application")) {
 
         myclear();
         alert();
-        setTimeout(() => {window.location.replace('./index.html')},1500);
+        setTimeout(() => {window.location.replace('./index.html')},2000);
         
     }); 
 }
@@ -80,7 +80,7 @@ function myclear(){
 }
 
 function alert(){
-    $.bootstrapGrowl("Thank you for submiting to Rumblebots",{
+    $.bootstrapGrowl("Thank you for submitting your application.",{
         type: "success",
         align: "center",
         delay: 3000,
