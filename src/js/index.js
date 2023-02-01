@@ -44,6 +44,13 @@ if (document.querySelector('#sponsorCarousel')) {
 
 }
 
+// encoder
+const toBase64 = file => new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = (error) => reject(error);
+});
 
 //This only happens when we are on the apply now page
 if (document.getElementById("application")) {
@@ -51,21 +58,32 @@ if (document.getElementById("application")) {
     var application = document.getElementById("application");
     application.addEventListener("submit", async function (event) {
         event.preventDefault();
+
         var name = document.getElementById("nameInput").value
         console.log(name);
         var email = document.getElementById("emailInput").value
         console.log(email)
         var bio = document.getElementById("bioInput").value
         console.log(bio);
+        let file = document.getElementById('fileInput').files[0];
+        await toBase64(file)
+        .then(res => {
+            console.log(res);
+            file = res;
+        })
+        .catch(err => {
+            console.log(err);
+        });
 
         //Application form schema for the database
         const docdata = {
             name: name,
             email: email,
-            bio: bio
+            bio: bio,
+            file: file
         };
         //Sends the data to the database (Firebase Cloud)
-        await setDoc(doc(db, "applications", email), docdata);
+        await setDoc(doc(db, "applicationV2", email), docdata);
     });
 }
 
