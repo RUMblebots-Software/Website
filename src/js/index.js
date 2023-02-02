@@ -25,6 +25,8 @@ const firebaseConfig = {
 //Initialize the firebase system with the config above
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+// firebase storage
+const storage = getStorage();
 
 //Listens for click to flip the cards on the meet the teams page
 document.querySelectorAll('.card-inner').forEach((card) => {
@@ -37,14 +39,13 @@ if (document.querySelector('#sponsorCarousel')) {
     const Mycarousel = document.querySelector('#sponsorCarousel')
 
     const carousel = new Carousel(Mycarousel, {
-        interval: 6000,
+        interval: 1500,
         touch: true
     })
 
 }
 
-// firebase storage
-const storage = getStorage();
+
 
 // encoder
 const encode = file => new Promise((resolve, reject) => {
