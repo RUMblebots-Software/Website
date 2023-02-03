@@ -47,13 +47,7 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="meet-the-team.html">Meet the Team</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="meet-the-bots.html">Meet the Bots</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="apply-now.html">Apply Now!</a>
                 </li>
             </ul>
         </div>
@@ -203,14 +197,6 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-4">
-                                                        <p><strong>Weight: </strong></p>
-                                                    </div>
-                                                    <div class="col-8">
-                                                        300g
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-4">
                                                         <p><strong>Year built: </strong></p>
                                                     </div>
                                                     <div class="col-8">
@@ -219,10 +205,20 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-4">
+                                                        <p><strong>Weight: </strong></p>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        300g
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">
                                                         <p><strong>Micro-controller: </strong></p>
                                                     </div>
                                                     <div class="col-8">
-                                                        Teensy 4.0
+                                                        <p><a style="text-decoration: none;"
+                                                                href="https://www.pjrc.com/store/teensy40.html">
+                                                                Teensy 4.0</a></p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -230,7 +226,9 @@
                                                         <p><strong>Distance sensors: </strong></p>
                                                     </div>
                                                     <div class="col-8">
-                                                        7 SHARP GP2Y0A21YK0F
+                                                        <p>7 <a style="text-decoration: none;"
+                                                                href="https://www.pololu.com/product/136">SHARP
+                                                                GP2Y0A21YK0F</a></p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -238,7 +236,9 @@
                                                         <p><strong>Line sensors: </strong></p>
                                                     </div>
                                                     <div class="col-8">
-                                                        3 JSumo ML2
+                                                        <p>3 <a style="text-decoration: none;"
+                                                                href="https://www.jsumo.com/dual-line-sensor-ml2">JSumo
+                                                                ML2</a></p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -246,7 +246,9 @@
                                                         <p><strong>Gyroscope: </strong></p>
                                                     </div>
                                                     <div class="col-8">
-                                                        L3GD20H
+                                                        <p><a style="text-decoration: none;"
+                                                                href="https://www.pololu.com/product/2129">L3GD20H</a>
+                                                        </p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -254,9 +256,18 @@
                                                         <p><strong>Key people:</strong></p>
                                                     </div>
                                                     <div class="col-8">
-                                                        <p>Edimar Valentín Kery (Project Leader)</p>
-                                                        <p>Jomar Alayon Freytes</p>
-                                                        <p>Ammarilys Roldan</p>
+                                                        <p>Edimar Valentín Kery <br> [<a style="text-decoration: none;"
+                                                                href="mailto:edimar.valentin@upr.edu">edimar.valentin@upr.edu</a>]
+                                                        </p>
+                                                        <p>Jomar Alayón Freytes <br> [<a style="text-decoration: none;"
+                                                                href="mailto:jomar.alayon@upr.edu">jomar.alayon@upr.edu</a>]
+                                                        </p>
+                                                        <p>Amarilys Otero<br>[<a style="text-decoration: none;"
+                                                                href="mailto:amarilys.otero@upr.edu">amarilys.otero@upr.edu</a>]
+                                                        </p>
+                                                        <p>Jorge Hernández <br>[<a style="text-decoration: none;"
+                                                                href="mailto:jorge.hernandez34">jorge.hernandez34@upr.edu</a>]
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -300,22 +311,58 @@
                             <div class="row">
                                 <p class="display-6" style="text-align: left;">Programming</p>
                                 <div class="col-7">
-                                    <p class="lead" style="text-align: left;">Many of Luigi’s improvements were possible
-                                        thanks to our custom designed printed circuit board (PCB) that was designed to
-                                        facilitate many connections between the microcontroller and Luigi’s 14
-                                        electrical components. We named it the RUMblebots’ Control Board and it has some
-                                        key aspects. With the Teensy 4.0 at its core, is surrounded with other
-                                        components that help make a complete mini-sumo. In the middle of the board,
-                                        there is a TB6612FNG module driving both DC motors and to the right of it, a
-                                        L3GD20H gyroscope, connected via I2C, keeping track of the yaw angular rate of
-                                        rotation of the mini sumo. The board has 12 screw terminals where the positive,
-                                        negative, and signal cables of its sensors can be connected. Luigi only has 10
-                                        sensors, there are 2 to spare for future applications.
+                                    <p class="lead" style="text-align: left;"> Luigi can be programmed with a similar
+                                        syntax as you would with an Arduino, mostly in the C++ programming language. We
+                                        preferred PlatformIO on VSCode as the best choice for collaborative embedded
+                                        development and dependency management. Our dependencies for the mini sumo are
+                                        the Arduino Software Development Kit, providing the definitions of core
+                                        functions like ‘digitalWrite’ and ‘analogRead’, the SharpIR library for managing
+                                        the distance sensors, the Wire library for I2C connections and the L3G library
+                                        for interfacing with the gyroscope.
+                                    </p>
+                                    <p class="lead" style="text-align: left;">
+                                        As the connections in mini sumo are already made, we gave them proper names to
+                                        not have to deal with random pin numbers. We used macros as our choice because
+                                        it is standard practice. A macro is a piece of code that is replaced by the
+                                        value of a macro, whenever the compiler finds the new definition, it replaces
+                                        the definition with a given value. Naming conventions recommend that macros are
+                                        defined in UPPERCASE to tell them apart from classes, functions, and variables.
+                                    </p>
+                                    <p class="lead" style="text-align: left;">
+                                        The gyroscope itself is a L3G class called gyro encompassing the necessary
+                                        methods (functions) for interfacing the gyroscope. The main one of interest is
+                                        the ‘.read()’ method that allows us to measure how many degrees of second in the
+                                        pitch axis, roll axis and yaw axis. Our only axis of interest is the yaw axis,
+                                        or in this case, the z axis when interfacing the gyro. Degrees per second alone
+                                        is not useful to tell how much has the mini sumo turned, we want to measure
+                                        displacement which takes time into consideration. Using the ‘millis()’ function,
+                                        from the Arduino SDK, we can measure how much time has gone by in milliseconds
+                                        since we started measuring and calculate the time difference. Once we know how
+                                        much time has elapsed since we started measuring, we can easily calculate the
+                                        angular velocity times speed to get our displacement and the mini sumo will know
+                                        how is situated. This allows for precise turning.
                                     </p>
                                 </div>
                                 <div class="col-5">
                                     <img src="../img/luigi-code.png" class="img-fluid">
                                 </div>
+                                <p class="lead" style="text-align: left;">
+                                    The TB6612FNG dual motor drive must be controlled with a predetermined logic to
+                                    make each of the motors go clockwise or counterclockwise. The speed of each
+                                    motor can be controlled with Pulse-Width Modulation (PWM) to control speed. This
+                                    can be done easily by the ‘analogWrite()’ which already emits width modulated
+                                    pulses by default and it allows us to control voltages in contrast to a digital
+                                    only pin, where you can output a fixed voltage that is either lower 0V or higher
+                                    than 3.3V.
+                                </p>
+                                <p class="lead" style="text-align: left;">
+                                    The SHARP GP2Y0A21YK0F distance sensors readings are processed with the SharpIR
+                                    library which comes with a handful of useful functions to get the most possible
+                                    accurate readings.Upon calling the ‘getDistance()’ method, the SharpIR library
+                                    first performs 25 readings coming from the sensor, it will sort the values and
+                                    convert the median to centimeters. We can then use that value from 10cm to 80cm
+                                    to decide what action should the mini sumo take.
+                                </p>
                             </div>
                         </div>
                     </div>
