@@ -56,6 +56,12 @@
         </a>
     </nav>
 
+    <div class="row d-md-none mb-5">
+        <div class="col-sm-12 d-flex justify-content-center">
+            <img id="logo" src="/src/img/rumblebots.png" height="100" alt="logo">
+        </div>
+    </div>
+
     <!--Bots Tabs-->
     <div class="container">
         <div class="row my-4">
@@ -98,21 +104,21 @@
                 <div class="tab-pane fade show" id="luigi-tab-pane" role="tabpanel" aria-labelledby="luigi-tab"
                     tabindex="0">
                     <div class="container">
-                        <div class="py-4 row">
-                            <div class="col-md-12 col-lg-6">
+                        <div class="py-4 row re">
+                            <div class="col-sm-12 col-lg-6">
                                 <div class="row">
-                                    <p class="lead" style="text-align: left;">
+                                    <p class="lead text-start">
                                         Luigi is an autonomous combat mini-sumo.
-                                        Is controlled by Teensy 4.0 handling sensor input and motor control. Its two 750
+                                        Is controlled by Teensy 4.0 handling sensor input and motor control. Its two 400
                                         RPM DC motors are controlled by a TB6612FNG module plugged into the RUMblebots’
                                         control board. The robot keeps track of its orientation with a L3GD20H gyro
                                         carrier module to measure the yaw angular rates of rotation. Luigi is equipped
                                         with seven SHARP GP2Y0A21YK0F analog distance sensors and three ML2 dual micro
-                                        line sensors from JSumo. Luigi runs on a 3 cell, 11.1, 350mAH battery.</p>
+                                        line sensors from JSumo. Luigi runs on a 3 cell, 11.1V, 350mAH battery.</p>
                                 </div>
                                 <div class="row">
-                                    <p class="display-6" style="text-align: left;">Background</p>
-                                    <p class="lead" style="text-align: left;">The Mini-Sumo competitions consists of
+                                    <p class="display-6 text-center text-md-start">Background</p>
+                                    <p class="lead text-start">The Mini-Sumo competitions consists of
                                         making an autonomous robot that can face off against another one of its kind
                                         in a specified field of combat. The task of Mini-Sumo is to get the opponent
                                         out of the ring, following all the rules of politeness and competition. The
@@ -120,10 +126,10 @@
                                         in the middle of it. The ring has a diameter of 77cm and a height of 2.5cm.
                                         The white border width is 2.5cm, the starting lines are 1cm width, 10cm
                                         length, and are located 5cm from the center..</p>
-                                    <div class="col-5">
+                                    <div class="col-sm-12 col-lg-5">
                                         <img src="../img/minisumo-ring.png" class="img-fluid">
                                     </div>
-                                    <div class="col-7">
+                                    <div class="col-sm-12 col-lg-7">
                                         <div class="card">
                                             <div class="card-body">
                                                 <div class="container">
@@ -155,17 +161,18 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="lead" style="text-align: left;">The major restrictions for this
+                                    <p class="lead text-start">The major restrictions for this
                                         competition are its size and its weight. The Mini-Sumo size must be 10cm by 10cm
                                         in both length and width; however, its height can be up to the maker’s
                                         discretion. The mass limit of the robot is 500g.</p>
-                                    <p class="lead" style="text-align: left;"> Mini-Sumo must drive autonomously. Remote
+                                    <p class="lead text-start"> Mini-Sumo must drive autonomously. Remote
                                         controls or any other form of outside
                                         control of the robot is prohibited. The robot must wait 5 seconds after pressing
                                         the start button before it can start moving</p>
                                 </div>
                             </div>
-                            <div class="col-md-12 col-lg-6">
+                            <!--Luigi Overview Card-->
+                            <div class="col-sm-12 col-lg-6">
                                 <div class="row m-4 d-flex justify-content-center">
                                     <img style="width: 60%; height: auto;" src="../img/luigi.png" alt="Luigi Model">
                                 </div>
@@ -188,74 +195,84 @@
                                                     <p class="display-6 text-center">Overview</p>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-4">
+                                                    <div class="col-sm-4">
                                                         <p><strong>Category: </strong></p>
                                                     </div>
-                                                    <div class="col-8">
+                                                    <div class="col-sm-8">
                                                         Mini-Sumo
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-4">
+                                                    <div class="col-sm-4 col-md-4">
                                                         <p><strong>Year built: </strong></p>
                                                     </div>
-                                                    <div class="col-8">
+                                                    <div class="col-sm-8 col-md-8">
                                                         2022
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-4">
+                                                    <div class="col-sm-4 col-md-4">
                                                         <p><strong>Weight: </strong></p>
                                                     </div>
-                                                    <div class="col-8">
+                                                    <div class="col-sm-8 col-md-8">
                                                         300g
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-4">
+                                                    <div class="col-sm-4 col-md-4">
                                                         <p><strong>Micro-controller: </strong></p>
                                                     </div>
-                                                    <div class="col-8">
+                                                    <div class="col-sm-8 col-md-8">
                                                         <p><a style="text-decoration: none;"
                                                                 href="https://www.pjrc.com/store/teensy40.html">
                                                                 Teensy 4.0</a></p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-4">
+                                                    <div class="col-sm-4 col-md-4">
+                                                        <p><strong>Motors: </strong></p>
+                                                    </div>
+                                                    <div class="col-sm-8 col-md-8">
+                                                        <p>2 <a style="text-decoration: none;"
+                                                                href="https://www.jsumo.com/core-dc-motor-6v-400-rpm">
+                                                                400RPM Core DC</a></p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-4 col-md-4">
                                                         <p><strong>Distance sensors: </strong></p>
                                                     </div>
-                                                    <div class="col-8">
+                                                    <div class="col-sm-8 col-md-8">
                                                         <p>7 <a style="text-decoration: none;"
                                                                 href="https://www.pololu.com/product/136">SHARP
                                                                 GP2Y0A21YK0F</a></p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-4">
+                                                    <div class="col-sm-4 col-md-4">
                                                         <p><strong>Line sensors: </strong></p>
                                                     </div>
-                                                    <div class="col-8">
+                                                    <div class="col-sm-8 col-md-8">
                                                         <p>3 <a style="text-decoration: none;"
                                                                 href="https://www.jsumo.com/dual-line-sensor-ml2">JSumo
                                                                 ML2</a></p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-4">
+                                                    <div class="col-sm-4 col-md-4">
                                                         <p><strong>Gyroscope: </strong></p>
                                                     </div>
-                                                    <div class="col-8">
+                                                    <div class="col-sm-8 col-md-8">
                                                         <p><a style="text-decoration: none;"
                                                                 href="https://www.pololu.com/product/2129">L3GD20H</a>
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-4">
+                                                    <div class="col-sm-12 col-md-4">
                                                         <p><strong>Key people:</strong></p>
                                                     </div>
-                                                    <div class="col-8">
+                                                    <div class="col-sm-12 col-md-8">
                                                         <p>Edimar Valentín Kery <br> [<a style="text-decoration: none;"
                                                                 href="mailto:edimar.valentin@upr.edu">edimar.valentin@upr.edu</a>]
                                                         </p>
@@ -276,8 +293,8 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <p class="display-6" style="text-align: left;">Design</p>
-                                <p class="lead" style="text-align: left;">The design for Luigi was mostly inspired by
+                                <p class="display-6 text-center text-md-start">Design</p>
+                                <p class="lead text-start">The design for Luigi was mostly inspired by
                                     the flaws observed with Mario. We didn’t want to be limited by a microcontroller
                                     with a small number of I/O pins, when more was needed to develop a more intelligent
                                     sumo. We started off the design with the Teensy 4.0, which has 40 I/O pins, allowing
@@ -289,9 +306,10 @@
                                     gyroscope, we’re able to have a mini sumo that would roam, search, and push.</p>
                             </div>
                             <div class="row">
-                                <p class="display-6" style="text-align: left;">Control</p>
-                                <div class="col-8">
-                                    <p class="lead" style="text-align: left;">Many of Luigi’s improvements were possible
+                                <p class="display-6 text-center text-md-start">Control</p>
+                                <div class="col-12">
+                                    <img src="../img/rumblebots-breakout-board-1.png" class="img-fluid float-end imgshadow">
+                                    <p class="lead text-start">Many of Luigi’s improvements were possible
                                         thanks to our custom designed printed circuit board (PCB) that was designed to
                                         facilitate many connections between the microcontroller and Luigi’s 14
                                         electrical components. We named it the RUMblebots’ Control Board and it has some
@@ -304,14 +322,12 @@
                                         sensors, there are 2 to spare for future applications.
                                     </p>
                                 </div>
-                                <div class="col-4">
-                                    <img src="../img/rumblebots-breakout-board-1.png" class="img-fluid">
-                                </div>
                             </div>
                             <div class="row">
-                                <p class="display-6" style="text-align: left;">Programming</p>
-                                <div class="col-7">
-                                    <p class="lead" style="text-align: left;"> Luigi can be programmed with a similar
+                                <p class="display-6 text-center text-md-start">Programming</p>
+                                <div class="col-sm-12">
+                                    <img src="../img/luigi-code.png" class="img-fluid float-end imgshadow" width="50%">
+                                    <p class="lead text-start"> Luigi can be programmed with a similar
                                         syntax as you would with an Arduino, mostly in the C++ programming language. We
                                         preferred PlatformIO on VSCode as the best choice for collaborative embedded
                                         development and dependency management. Our dependencies for the mini sumo are
@@ -320,7 +336,7 @@
                                         the distance sensors, the Wire library for I2C connections and the L3G library
                                         for interfacing with the gyroscope.
                                     </p>
-                                    <p class="lead" style="text-align: left;">
+                                    <p class="lead text-start">
                                         As the connections in mini sumo are already made, we gave them proper names to
                                         not have to deal with random pin numbers. We used macros as our choice because
                                         it is standard practice. A macro is a piece of code that is replaced by the
@@ -328,7 +344,7 @@
                                         the definition with a given value. Naming conventions recommend that macros are
                                         defined in UPPERCASE to tell them apart from classes, functions, and variables.
                                     </p>
-                                    <p class="lead" style="text-align: left;">
+                                    <p class="lead text-start">
                                         The gyroscope itself is a L3G class called gyro encompassing the necessary
                                         methods (functions) for interfacing the gyroscope. The main one of interest is
                                         the ‘.read()’ method that allows us to measure how many degrees of second in the
@@ -343,10 +359,7 @@
                                         how is situated. This allows for precise turning.
                                     </p>
                                 </div>
-                                <div class="col-5">
-                                    <img src="../img/luigi-code.png" class="img-fluid">
-                                </div>
-                                <p class="lead" style="text-align: left;">
+                                <p class="lead text-start">
                                     The TB6612FNG dual motor drive must be controlled with a predetermined logic to
                                     make each of the motors go clockwise or counterclockwise. The speed of each
                                     motor can be controlled with Pulse-Width Modulation (PWM) to control speed. This
@@ -355,7 +368,7 @@
                                     only pin, where you can output a fixed voltage that is either lower 0V or higher
                                     than 3.3V.
                                 </p>
-                                <p class="lead" style="text-align: left;">
+                                <p class="lead text-start">
                                     The SHARP GP2Y0A21YK0F distance sensors readings are processed with the SharpIR
                                     library which comes with a handful of useful functions to get the most possible
                                     accurate readings.Upon calling the ‘getDistance()’ method, the SharpIR library
@@ -418,32 +431,248 @@
                 <div class="tab-pane fade show" id="mario-tab-pane" role="tabpanel" aria-labelledby="mario-tab"
                     tabindex="0">
                     <div class="container">
-                        <div class="row py-4">
+                        <div class="py-4 row">
                             <div class="col-md-12 col-lg-6">
                                 <div class="row">
-                                    <h4 style="text-align: left;">Who is Arsenal?</h4>
-                                    <p style="text-align: left;">Arsenal is a 12-pound category fighting
-                                        robot. Its the first robot ever developed by the team. The robot is remote
-                                        controlled, and its weapon can be swapped between a vertical spinner and a
-                                        horizontal one. Arsenal's purpose is to destroy the oponent, and it has
-                                        everything
-                                        it needs to do just that.</p>
+                                    <p class="lead">
+                                        Mario is RUMblebots first autonomous combat mini-sumo. Is controlled by a
+                                        XMotion Arduino Based All in One Controller V.2 developed by JSumo Ultimate
+                                        Robot Parts, which embeds an Atmega32U4 microcontroller with Arduino Leonardo
+                                        Bootloader
+                                        uploaded, voltage regulator and motor drivers. It has two 400RPM DC motors, two
+                                        SHARP GP2Y0A21YK0F analog distance sensors on the front face, and three ML1 line
+                                        sensors from JSumo.
+                                        Mario runs on a 3 cell, 11.1V, 350mAH battery.</p>
+                                </div>
+                                <div class="row">
+                                    <p class="display-6 text-center text-md-start">Background</p>
+                                    <p class="lead text-center text-md-start">The Mini-Sumo competitions consists of
+                                        making an autonomous robot that can face off against another one of its kind
+                                        in a specified field of combat. The task of Mini-Sumo is to get the opponent
+                                        out of the ring, following all the rules of politeness and competition. The
+                                        field is a raised ring that has a white line border and two starting lines
+                                        in the middle of it. The ring has a diameter of 77cm and a height of 2.5cm.
+                                        The white border width is 2.5cm, the starting lines are 1cm width, 10cm
+                                        length, and are located 5cm from the center..</p>
+                                    <div class="col-sm-12 col-lg-5">
+                                        <img src="../img/minisumo-ring.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-sm-12 col-lg-5">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <p><strong>Diameter: </strong></p>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            77cm
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <p><strong>White border width: </strong></p>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            2.5cm
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <p><strong>Height: </strong></p>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            2.5cm
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="lead text-start">The major restrictions for this
+                                        competition are its size and its weight. The Mini-Sumo size must be 10cm by 10cm
+                                        in both length and width; however, its height can be up to the maker’s
+                                        discretion. The mass limit of the robot is 500g.</p>
+                                    <p class="lead text-start"> Mini-Sumo must drive autonomously. Remote
+                                        controls or any other form of outside
+                                        control of the robot is prohibited. The robot must wait 5 seconds after pressing
+                                        the start button before it can start moving</p>
                                 </div>
                             </div>
                             <div class="col-md-12 col-lg-6">
                                 <div class="row m-4 d-flex justify-content-center">
-                                    <img style="width: 60%; height: auto;" src='/src/img/mario.png' alt="Mario's Model">
+                                    <img style="width: 60%; height: auto;" src="../img/mario.png" alt="Luigi Model">
                                 </div>
-                                <div class="row m-4 d-flex justify-content-center">
+                                <div class="row mb-3">
                                     <div class="col-4">
-                                        <img src='/src/img/mario.png' alt="" style="width: 70%">
+                                        <img src="../img/mario-3.jpg" class="round-border img-fluid" alt="">
                                     </div>
                                     <div class="col-4">
-                                        <img src='/src/img/mario.png' alt="" style="width: 70%">
+                                        <img src="../img/mario-1.jpg" class="round-border img-fluid" alt="">
                                     </div>
                                     <div class="col-4">
-                                        <img src='/src/img/mario.png' alt="" style="width: 70%">
+                                        <img src="../img/mario-2.jpg" class="round-border img-fluid" alt="">
                                     </div>
+                                </div>
+                                <div class="row">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <p class="display-6 text-center">Overview</p>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <p><strong>Category: </strong></p>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        Mini-Sumo
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <p><strong>Year built: </strong></p>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        2022
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <p><strong>Weight: </strong></p>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        303.8g
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <p><strong>Micro-controller: </strong></p>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <p><a style="text-decoration: none;"
+                                                                href="https://www.jsumo.com/xmotion-arduino-robot-controller">
+                                                                XMotion V.2</a></p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <p><strong>Motors: </strong></p>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <p>2 <a style="text-decoration: none;"
+                                                                href="https://www.jsumo.com/core-dc-motor-6v-400-rpm">
+                                                                400RPM Core DC</a></p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <p><strong>Distance sensors: </strong></p>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <p>2 <a style="text-decoration: none;"
+                                                                href="https://www.pololu.com/product/136">SHARP
+                                                                GP2Y0A21YK0F</a></p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <p><strong>Line sensors: </strong></p>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <p>3 <a style="text-decoration: none;"
+                                                                href="https://www.jsumo.com/micro-line-sensor-ml1">JSumo
+                                                                ML1</a></p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-4">
+                                                        <p><strong>Key people:</strong></p>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-8">
+                                                        <p>Edimar Valentín Kery <br> [<a style="text-decoration: none;"
+                                                                href="mailto:edimar.valentin@upr.edu">edimar.valentin@upr.edu</a>]
+                                                        </p>
+                                                        <p>Jomar Alayón Freytes <br> [<a style="text-decoration: none;"
+                                                                href="mailto:jomar.alayon@upr.edu">jomar.alayon@upr.edu</a>]
+                                                        </p>
+                                                        <p>Amarilys Otero<br>[<a style="text-decoration: none;"
+                                                                href="mailto:amarilys.otero@upr.edu">amarilys.otero@upr.edu</a>]
+                                                        </p>
+                                                        <p>Juan C. Martínez <br>[<a style="text-decoration: none;"
+                                                                href="mailto:juan.martinez41@upr.edu">juan.martinez41@upr.edu</a>]
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p class="display-6 text-center text-md-start">Design</p>
+                                <p class="lead text-start">
+                                    Mario has a basic symmetric cubed design to give out a sturdy look while also being
+                                    able to demonstrate it. It has a weight of 303.8grams, which keeps it in the range
+                                    of 500 grams that the competition requires. Its design is simple for being the first
+                                    Sumo Bot to be designed and made, consisting of a cubes structure with a “lifting
+                                    ramp” to push its opponents away. The wheels were placed all the way in the back of
+                                    the of the mini sumo to promote balance and stability to the robot during combat,
+                                    most of which is focused on head-on collisions and lifting the opponent off the
+                                    floor of the ring. It is also the first time a software team has been integrated to
+                                    help program the robot’s techniques to endorse its functionality properly. Its
+                                    microcontroller allows the robot to perform up to 8 different strategies to use
+                                    during the competition.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <p class="display-6 text-center text-md-start">Control</p>
+                                <div class="col-sm-12">
+                                    <img src="../img/mario-6.jpg" class="round-border float-end imgshadow" width="25%">
+                                    <p class="lead text-start">Mario is designed around the XMotion
+                                        Arduino Based All in One Controller V.2, controlled with an Atmega 32U4 with the
+                                        Arduino Leonardo Bootloader uploaded for easy development. It has two motor
+                                        drivers that can output up to 6 amps, giving the mini sumo a hard kick and a
+                                        switching voltage regulator, making it energy efficient. It has a trimpot as an
+                                        analog input element which can be used to control variables inside the program
+                                        governing the mini sumo before battle commences. It includes a dipswitch that
+                                        acts as an 8 combination digital switch, allowing an user to “select” something
+                                        in the programming in the sumo without the use of a computer. It has two screw
+                                        terminals for connecting the motors easily, 4 analog pins and 8 digital pins.
+                                        However, the cables for these pins must be soldered underneath the board.
+                                    </p>
+                                    <p class="lead text-start">
+                                        The XMotion V.2 is small, compact, light, and powerful; A great choice for
+                                        developing a first-time sumo.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p class="display-6 text-center text-md-start">Programming</p>
+                                <div class="col-sm-12">
+                                    <img src="../img/mario-code.png" class="round-border float-end imgshadow" width="50%">
+                                    <p class="lead text-start">
+                                        Mario can be programmed just like any Arduino on the market, with the C++
+                                        language. Using the Arduino Integrated Development Environment, also known as
+                                        IDE, programs can be written, compiled, and uploaded. Our dependency for the
+                                        programs running in this mini sumo is the “xmotion.h” library which has
+                                        important functions to control the board, mainly the motor drivers.
+                                    </p>
+                                    <p class="lead text-start">
+                                        The SHARP GP2Y0A21YK0F distance sensors signal cable outputs a voltage that must
+                                        be interpreted into some unit of length to make decisions. We developed
+                                        functions that convert the analog voltage being read and convert that into
+                                        centimeters. To decrease the chance of detecting outliers or the mini sumo
+                                        acting on false signals, we developed a function that will calculate the
+                                        average measurement taken through the sensors. The same logic and algorithms are
+                                        applied to the line sensors.
+                                    </p>
+                                    <p class="lead text-start">
+                                        The motors can be controlled through the xmotion class with pulse with
+                                        modulation, also known as PWM. If the robot needs to go right, you would call
+                                        “xmotion.right(PWM, TIME)” where time would be how long in milliseconds you want
+                                        the motor to run. This also goes for left, backward and forward.
+                                    </p>
                                 </div>
                             </div>
                         </div>
