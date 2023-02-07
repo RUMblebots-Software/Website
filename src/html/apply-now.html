@@ -60,7 +60,11 @@
             <img src="/src/img/rum_upr_web.jpg" class="uprm-web-logo">
         </a>
     </nav>
-
+    <!--Info-->
+    <div class="container">
+        <h1 class="display-5">Want to Join this <strong style="color: rgb(11, 108, 11);">Awesome</strong> Team!</h1>
+        <p class="lead">If you are interested in working with us, please fill this form and we'll contact you with more information.</p>
+    </div>
     <!--Application-->
     <div class="container" style="margin-top: 5%; width: 50%;margin-bottom: 10%;">
         <form id="application">
@@ -73,6 +77,16 @@
                 <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" required>
             </div>
             <div class="mb-3">
+                <label for="majorSelect">Select Your Major</label>
+                <select class="form-control" id="majorInput">
+                    <option>INME</option>
+                    <option>ININ</option>
+                    <option>INEL</option>
+                    <option>INSO/CIIC</option>
+                    <option>ADEM</option>
+                </select>
+            </div>
+            <div class="mb-3">
                 <label for="bioInput" class="form-label" aria-required="true">Tell us a bit about yourself</label>
                 <textarea class="form-control" id="bioInput" aria-label="Bio" required></textarea>
             </div>
@@ -81,7 +95,7 @@
                 <input type="file" class="form-control" id="fileInput" aria-describedby="fileHelp" required>
             </div>
             <div class="d-flex justify-content-center">
-                <button type="submit" class="btn btn-success">Submit Application</button>
+                <button type="submit" class="spinner-btn btn btn-success" id="submitBtn">Submit Application</button>
             </div>
         </form>
     </div>
