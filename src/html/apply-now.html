@@ -36,32 +36,29 @@
 <body style="min-height: 100%;">
     <!--Navigation Bar-->
     <nav class="navbar navbar-expand-md bg-white" id="navbar">
-        <a class="mx-3 navbar-brand d-none d-md-block" href="index.html">
-            <img id="logo" src="/src/img/rumblebots.png" height="70" alt="navbar-logo">
-        </a>
-        <button class="mx-3 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse m-3" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="meet-the-team.html">Meet the Team</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="meet-the-bots.html">Meet the Bots</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="apply-now.html">Apply Now!</a>
-                </li>
-            </ul>
+        <div class="container-fluid d-flex flex-row">
+            <div class="flex-column">
+                <a class="navbar-brand d-none d-md-block" href="index.html">
+                    <img id="logo" src="/src/img/rumblebots.png" height="70" alt="navbar-logo">
+                </a>
+            </div>
+            <div class="flex-column flex-fill">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="meet-the-team.html">Meet the Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="apply-now.html">Apply Now!</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex-column">
+                <a class="navbar-brand d-none d-md-block" href="https://www.uprm.edu/portada/">
+                    <img src="/src/img/rum_upr_web.jpg" class="uprm-web-logo">
+                </a>
+            </div>
         </div>
-        <a class="navbar-brand d-none d-md-block" href="https://www.uprm.edu/portada/">
-            <img src="/src/img/rum_upr_web.jpg" class="uprm-web-logo">
-        </a>
     </nav>
-
-    <!--Application-->
     <div class="container" style="margin-top: 5%; width: 50%;margin-bottom: 10%;">
         <form id="application">
             <div class="mb-3">
@@ -86,7 +83,6 @@
         </form>
     </div>
 </body>
-
 <!--Footer-->
 <footer style="min-height: 100%;">
     <div class="container-fluid text-center text-md-start">
