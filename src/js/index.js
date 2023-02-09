@@ -118,6 +118,7 @@ if (document.getElementById("application")) {
   
         myclear();
         Myalert();
+        button.innerHTML = "Submit Application";
         //setTimeout(() => { window.location.replace('./index.html') }, 2000);
       } else {
         button.innerHTML = "Submit Application";
