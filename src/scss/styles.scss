@@ -344,3 +344,15 @@ $background-color_1: #217600;
 	max-width: 760px;
   	margin: auto;
 }
+#form{
+	margin-top: 5%; 
+	width: 50%;
+	margin-bottom: 10%;
+}
+
+@media only screen and (max-width: 500px){
+	#form{
+		width: 100%;
+	}
+
+}
