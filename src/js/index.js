@@ -5,7 +5,7 @@
 import '../scss/styles.scss';
 import { Carousel } from 'bootstrap';
 import { initializeApp } from 'firebase/app';
-import { getFirestore, setDoc, doc } from 'firebase/firestore';
+import { getFirestore, setDoc, doc, getDoc } from 'firebase/firestore';
 import { getStorage, ref, uploadBytes, uploadString } from "firebase/storage";
 
 
@@ -46,72 +46,112 @@ if (document.querySelector('#sponsorCarousel')) {
 }
 
 
-
-// encoder
-const encode = file => new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = (error) => reject(error);
-});
-
 //This only happens when we are on the apply now page
 if (document.getElementById("application")) {
-    //This gets the application form data and prepares it for the database
-    var application = document.getElementById("application");
+    const cooldownPeriod = 15 * 60 * 1000; //15 minutes in milliseconds for the submission cooldown
+    var filePassed = false; //flag if file was valid
+  
+    var application = document.getElementById("application"); //gets the whole form and listens for submission
     application.addEventListener("submit", async function (event) {
-        event.preventDefault();
+      event.preventDefault();
+        //all the field of the form vvv
+      var button = document.getElementById("submitBtn");
+      var name = document.getElementById("nameInput").value;
+      var email = document.getElementById("emailInput").value;
+      var major = document.getElementById("majorInput").value;
+      var bio = document.getElementById("bioInput").value;
+      let file = document.getElementById('fileInput').files[0];
 
-        
-        var name = document.getElementById("nameInput").value
-        console.log(name);
-        var email = document.getElementById("emailInput").value
-        console.log(email)
-        var bio = document.getElementById("bioInput").value
-        console.log(bio);
-        let file = document.getElementById('fileInput').files[0];
-        
-        // encoding
-        await encode(file)
-        .then(res => {
-            console.log('File encoded!');
-            file = res;
-        })
-        .catch(err => {
-            console.log(err);
-        });
-        
-        // uploading encoded file
-        const storageRef = ref(storage, `app_uploads/${name}'s Upload`);
-        await uploadString(storageRef, file)
+      //gets data form the collection with the submitted email
+      const docRef = doc(db, "applicationV4", email);
+      const docSnap = await getDoc(docRef);
+        //checks if the email already subbmitted an application
+      if (docSnap.exists()) {
+        console.log('here')
+        const currentTime = new Date(Date.now());
+        const timeDifference = currentTime.getTime() - Number(docSnap.data().dateUploaded);
+        /**gets the dates from the database and checks 
+         the time difference and checks if it is more than 
+         15 minutes and returns and alert if not**/
+        if (timeDifference < cooldownPeriod) {
+            //Sends a alert with the minutes left on the cooldown
+          myFail("You've already submitted an application today you have " + (15 - Math.round(((timeDifference/1000) / 60))) + " minutes left.")
+          return;
+        }
+
+      }
+      //Creates Storage Reference
+      const storageRef = ref(storage, `app_uploads/${name}'s Upload`);
+      //Checks if the file is a PDF
+      if (getFileType(file) !== "pdf") {
+        myFail("Your resume has to be a PDF");
+        return;
+      }
+      //Checks if the email is a valid UPR email
+      if (getEmailDomain(email) !== "upr.edu") {
+        myFail("Please enter a valid UPR email");
+        return;
+      }
+      
+      button.innerHTML = '<i class="fa fa-circle-o-notch fa-spin"></i> loading...';
+      await uploadBytes(storageRef, file)
         .then((snapshot) => {
-            console.log('Uploaded file to storage!');
+          console.log('Uploaded file to storage!');
+          filePassed = true;
         })
-
-        //Application form schema for the database
+        .catch((error) => {
+          console.error('Failed to upload file to storage', error);
+          filePassed = false;
+        });
+  
+      if (filePassed) {
+        const date = new Date(Date.now());
         const docdata = {
-            name: name,
-            email: email,
-            bio: bio,
-            file: storageRef.fullPath,
+          name: name,
+          email: email,
+          major: major,
+          bio: bio,
+          file: storageRef.fullPath,
+          dateUploaded: date.getTime().toString()
         };
-        //Sends the data to the database (Firebase Cloud)
-        await setDoc(doc(db, "applicationV2", email), docdata);
-
+        await setDoc(docRef, docdata);
+  
         myclear();
-        alert();
-        setTimeout(() => {window.location.replace('./index.html')},2000);
-        
-    }); 
+        Myalert();
+        //setTimeout(() => { window.location.replace('./index.html') }, 2000);
+      } else {
+        button.innerHTML = "Submit Application";
+        myFail("Failed to upload file to storage");
+      }
+    });
+  }
+  
+
+function getFileType(file) {
+    return file.name.split('.').pop()
 }
 
-function myclear(){
+function getEmailDomain(email) {
+    return email.split("@").pop()
+}
+
+function myclear() {
     document.getElementById("application").reset();
 }
 
-function alert(){
-    $.bootstrapGrowl("Thank you for submitting your application.",{
+function Myalert() {
+    $.bootstrapGrowl("Thank you for submitting your application.", {
         type: "success",
+        align: "center",
+        delay: 3000,
+        allow_dismiss: false,
+        stackup_spacing: 10
+    });
+}
+
+function myFail(err) {
+    $.bootstrapGrowl(err, {
+        type: "danger",
         align: "center",
         delay: 3000,
         allow_dismiss: false,
