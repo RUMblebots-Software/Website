@@ -16,6 +16,10 @@ $color_9: #1DA1F2;
 $color_10: #0072b1;
 $color_11: #333;
 $color_12: #C13584;
+$color_13: #B76935;
+$color_14: #291C60;
+$color_15: #D023CB;
+$color_16: #00DCD8;
 $background-color_1: #217600;
 
 @keyframes blink {
@@ -89,6 +93,26 @@ $background-color_1: #217600;
 .yellow-lightning {
 	color: $color_5;
 	color: $color_5;
+}
+
+.brown-gavel{
+	color: $color_13;
+	color: $color_13;
+}
+
+.purple-nhrl{
+ 	color: $color_14;
+	color: $color_14;
+}
+
+.pink-nhrl{
+	color: $color_15;
+	color: $color_15;
+}
+
+.blue-nhrl{
+	color: $color_16;
+	color: $color_16;
 }
 
 .green-logistics {
