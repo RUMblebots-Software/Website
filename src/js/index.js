@@ -45,88 +45,118 @@ if (document.querySelector('#sponsorCarousel')) {
 
 }
 
+if (document.querySelector('#majorInput')) {
+    var select = document.querySelector('#majorInput');
+    var otherMajorInput = document.querySelector('#other-major');
+    var undo = document.querySelector(".input-group-append")
+    select.addEventListener('change', function () {
+        if (select.value === 'Other...') {
+            otherMajorInput.style.display = 'block';
+            select.style.display = 'none';
+            undo.style.display = 'block';
+        } else {
+            otherMajorInput.style.display = 'none';
+        }
+    });
+    undo.addEventListener('click', function () {
+        otherMajorInput.style.display = 'none';
+        select.style.display = 'block';
+        undo.style.display = 'none';
+    });
+}
 
 //This only happens when we are on the apply now page
 if (document.getElementById("application")) {
     const cooldownPeriod = 15 * 60 * 1000; //15 minutes in milliseconds for the submission cooldown
     var filePassed = false; //flag if file was valid
-  
+
     var application = document.getElementById("application"); //gets the whole form and listens for submission
     application.addEventListener("submit", async function (event) {
-      event.preventDefault();
+        event.preventDefault();
         //all the field of the form vvv
-      var button = document.getElementById("submitBtn");
-      var name = document.getElementById("nameInput").value;
-      var email = document.getElementById("emailInput").value;
-      var major = document.getElementById("majorInput").value;
-      var bio = document.getElementById("bioInput").value;
-      let file = document.getElementById('fileInput').files[0];
+        var button = document.getElementById("submitBtn");
+        var name = document.getElementById("nameInput").value;
+        var email = document.getElementById("emailInput").value;
+        var major = document.getElementById("majorInput").value;
+        var other = document.getElementById("other-major").value;
+        var bio = document.getElementById("bioInput").value;
+        let file = document.getElementById('fileInput').files[0];
 
-      //gets data form the collection with the submitted email
-      const docRef = doc(db, "applicationV4", email);
-      const docSnap = await getDoc(docRef);
-        //checks if the email already subbmitted an application
-      if (docSnap.exists()) {
-        console.log('here')
-        const currentTime = new Date(Date.now());
-        const timeDifference = currentTime.getTime() - Number(docSnap.data().dateUploaded);
-        /**gets the dates from the database and checks 
-         the time difference and checks if it is more than 
-         15 minutes and returns and alert if not**/
-        if (timeDifference < cooldownPeriod) {
-            //Sends a alert with the minutes left on the cooldown
-          myFail("You've already submitted an application today you have " + (15 - Math.round(((timeDifference/1000) / 60))) + " minutes left.")
-          return;
+        if (major == "Other...") {
+            if (other == "") {
+                myFail("Please input a major");
+                return;
+            }
+            else {
+                major = other;
+            }
         }
 
-      }
-      //Creates Storage Reference
-      const storageRef = ref(storage, `app_uploads/${name}'s Upload`);
-      //Checks if the file is a PDF
-      if (getFileType(file) !== "pdf") {
-        myFail("Your resume has to be a PDF");
-        return;
-      }
-      //Checks if the email is a valid UPR email
-      if (getEmailDomain(email) !== "upr.edu") {
-        myFail("Please enter a valid UPR email");
-        return;
-      }
-      
-      button.innerHTML = '<i class="fa fa-circle-o-notch fa-spin"></i> loading...';
-      await uploadBytes(storageRef, file)
-        .then((snapshot) => {
-          console.log('Uploaded file to storage!');
-          filePassed = true;
-        })
-        .catch((error) => {
-          console.error('Failed to upload file to storage', error);
-          filePassed = false;
-        });
-  
-      if (filePassed) {
-        const date = new Date(Date.now());
-        const docdata = {
-          name: name,
-          email: email,
-          major: major,
-          bio: bio,
-          file: storageRef.fullPath,
-          dateUploaded: date.getTime().toString()
-        };
-        await setDoc(docRef, docdata);
-  
-        myclear();
-        Myalert();
-        button.innerHTML = "Submit Application";
-        //setTimeout(() => { window.location.replace('./index.html') }, 2000);
-      } else {
-        button.innerHTML = "Submit Application";
-        myFail("Failed to upload file to storage");
-      }
+        //gets data form the collection with the submitted email
+        const docRef = doc(db, "applicationV4", email);
+        const docSnap = await getDoc(docRef);
+        //checks if the email already subbmitted an application
+        if (docSnap.exists()) {
+            console.log('here')
+            const currentTime = new Date(Date.now());
+            const timeDifference = currentTime.getTime() - Number(docSnap.data().dateUploaded);
+            /**gets the dates from the database and checks 
+             the time difference and checks if it is more than 
+             15 minutes and returns and alert if not**/
+            if (timeDifference < cooldownPeriod) {
+                //Sends a alert with the minutes left on the cooldown
+                myFail("You've already submitted an application today you have " + (15 - Math.round(((timeDifference / 1000) / 60))) + " minutes left.")
+                return;
+            }
+
+        }
+        //Creates Storage Reference
+        const storageRef = ref(storage, `app_uploads/${name}'s Upload`);
+        //Checks if the file is a PDF
+        if (getFileType(file) !== "pdf") {
+            myFail("Your resume has to be a PDF");
+            return;
+        }
+        //Checks if the email is a valid UPR email
+        if (getEmailDomain(email) !== "upr.edu") {
+            myFail("Please enter a valid UPR email");
+            return;
+        }
+
+        button.innerHTML = '<i class="fa fa-circle-o-notch fa-spin"></i> loading...';
+        await uploadBytes(storageRef, file)
+            .then((snapshot) => {
+                console.log('Uploaded file to storage!');
+                filePassed = true;
+            })
+            .catch((error) => {
+                console.error('Failed to upload file to storage', error);
+                filePassed = false;
+            });
+
+        if (filePassed) {
+            const date = new Date(Date.now());
+            const docdata = {
+                name: name,
+                email: email,
+                major: major,
+                bio: bio,
+                file: storageRef.fullPath,
+                dateUploaded: date.getTime().toString()
+            };
+            await setDoc(docRef, docdata);
+
+            myclear();
+            Myalert();
+            button.innerHTML = "Submit Application";
+            setTimeout(() => { window.location.replace('./index.html') }, 2000);
+        } else {
+            button.innerHTML = "Submit Application";
+            myFail("Failed to upload file to storage");
+        }
     });
-  }
-  
+}
+
 
 function getFileType(file) {
     return file.name.split('.').pop()

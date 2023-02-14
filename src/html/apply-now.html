@@ -68,7 +68,8 @@
     <!--Info-->
     <div class="container">
         <h1 class="display-5">Want to Join this <strong style="color: rgb(11, 108, 11);">Awesome</strong> Team!</h1>
-        <p class="lead">If you are interested in working with us, please fill this form and we'll contact you with more information.</p>
+        <p class="lead">If you are interested in working with us, please fill this form and we'll contact you with more
+            information.</p>
     </div>
     <!--Application-->
     <div class="container" id="form">
@@ -84,15 +85,24 @@
             <div class="mb-3">
                 <label for="majorSelect">Select Your Major</label>
                 <select class="form-control" id="majorInput">
-                    <option>INME</option>
+                    <option selected>INME</option>
                     <option>ININ</option>
                     <option>INEL</option>
                     <option>INSO/CIIC</option>
                     <option>ADEM</option>
+                    <option>Other...</option>
                 </select>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Other Major" id="other-major"
+                        aria-describedby="otherMajor" style="display: none;">
+                    <div class="input-group-append" style="display: none;">
+                        <button class="btn btn-outline-danger" type="button" id="undo-btn">Undo Selection</button>
+                    </div>
+                </div>
             </div>
             <div class="mb-3">
-                <label for="bioInput" class="form-label" aria-required="true">Tell us a bit about yourself</label>
+                <label for="bioInput" class="form-label" aria-required="true">Why are you interested in joining
+                    Us?</label>
                 <textarea class="form-control" id="bioInput" aria-label="Bio" required></textarea>
             </div>
             <div class="mb-3">
@@ -149,4 +159,5 @@
         </div>
     </div>
 </footer>
+
 </html>
