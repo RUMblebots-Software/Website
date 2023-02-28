@@ -6,8 +6,9 @@
 /* ¡Hoy, Ahora y Siempre... Colegio! */
 $color_1: #217600;
 $color_2: #989898;
-$color_3: #48955f;
-$color_4: #a0c18a;
+$color_3: rgb(72, 149, 95);
+$color_4: rgb(160, 193, 138);
+$color_4T: rgb(241, 241, 241);
 $color_5: #FFBF1F;
 $color_6: #85bb65;
 $color_7: #03A062;
@@ -88,6 +89,10 @@ $background-color_1: #217600;
 .green-light-rumble {
 	color: $color_4;
 	color: $color_4;
+}
+
+.bg-green-light-rumble {
+	background-color: $color_4T;
 }
 
 .yellow-lightning {
