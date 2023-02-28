@@ -2,3 +2,386 @@
 
 /* Import all of Bootstraps CSS */
 @import "~bootstrap/scss/bootstrap";
+
+/* ¡Hoy, Ahora y Siempre... Colegio! */
+$color_1: #217600;
+$color_2: #989898;
+$color_3: rgb(72, 149, 95);
+$color_4: rgb(160, 193, 138);
+$color_4T: rgb(241, 241, 241);
+$color_5: #FFBF1F;
+$color_6: #85bb65;
+$color_7: #03A062;
+$color_8: #4267B2;
+$color_9: #1DA1F2;
+$color_10: #0072b1;
+$color_11: #333;
+$color_12: #C13584;
+$color_13: #B76935;
+$color_14: #291C60;
+$color_15: #D023CB;
+$color_16: #00DCD8;
+$background-color_1: #217600;
+
+@keyframes blink {
+	50% {
+		border-left: 4px solid #48955f;
+	}
+
+	50% {
+		border-left: 4px solid transparent;
+	}
+}
+
+@keyframes blink {
+	50% {
+		border-left: 4px solid #48955f;
+	}
+
+	50% {
+		border-left: 4px solid transparent;
+	}
+}
+
+/*Make an image go from truly trasnaprent to visible*/
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+/*Fade In Animation*/
+/*Make an image go from truly trasnaprent to visible*/
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.verde-colegial {
+	color: $color_1;
+	color: $color_1;
+}
+
+.bg-verde-colegial {
+	background-color: $background-color_1;
+	background-color: $background-color_1;
+}
+
+.grey-rumble {
+	color: $color_2;
+	color: $color_2;
+}
+
+.green-dark-rumble {
+	color: $color_3;
+	color: $color_3;
+}
+
+.green-light-rumble {
+	color: $color_4;
+	color: $color_4;
+}
+
+.bg-green-light-rumble {
+	background-color: $color_4T;
+}
+
+.yellow-lightning {
+	color: $color_5;
+	color: $color_5;
+}
+
+.brown-gavel{
+	color: $color_13;
+	color: $color_13;
+}
+
+.purple-nhrl{
+ 	color: $color_14;
+	color: $color_14;
+}
+
+.pink-nhrl{
+	color: $color_15;
+	color: $color_15;
+}
+
+.blue-nhrl{
+	color: $color_16;
+	color: $color_16;
+}
+
+.green-logistics {
+	color: $color_6;
+	color: $color_6;
+}
+
+.green-matrix {
+	color: $color_7;
+	color: $color_7;
+}
+
+.blue-facebook {
+	color: $color_8;
+	color: $color_8;
+}
+
+.blue-twitter {
+	color: $color_9;
+	color: $color_9;
+}
+
+.blue-linkedin {
+	color: $color_10;
+	color: $color_10;
+}
+
+.black-github {
+	color: $color_11;
+	color: $color_11;
+}
+
+.pink-instagram {
+	color: $color_12;
+	color: $color_12;
+}
+
+.uprm-web-logo {
+	height: 59px;
+	width: 193px;
+	margin-right: 0px;
+	height: 59px;
+	width: 193px;
+	margin-right: 0px;
+}
+
+.gradient {
+	-webkit-mask-image: linear-gradient(to left, black 75%, transparent 99%);
+	mask-image: linear-gradient(to left, black 75%, transparent 96%);
+	-webkit-mask-image: linear-gradient(to left, black 75%, transparent 97%);
+	mask-image: linear-gradient(to left, black 75%, transparent 96%);
+}
+
+.bg-gradient-white {
+	background-image: linear-gradient(180deg, #f0f1f3 0, #fff);
+	background-image: linear-gradient(180deg, #f0f1f3 0, #fff);
+}
+
+/* BS Container with NO padding*/
+.container-hero {
+	--bs-gutter-x: 0;
+	--bs-gutter-y: 0;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 0px;
+	padding-right: 0px;
+	--bs-gutter-x: 0;
+	--bs-gutter-y: 0;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#logo {
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease;
+
+	&:hover {
+		transform: scale(1.2);
+		transform: scale(1.2);
+	}
+}
+
+.cursor-blink {
+	border-left: 4px solid #48955f;
+	animation: blink 1.5s infinite;
+	border-left: 4px solid #48955f;
+	animation: blink 1.5s infinite;
+}
+
+.cursor-static {
+	border-left: 4px solid #48955f;
+	border-left: 4px solid #48955f;
+}
+
+.fade-in {
+	animation: fadeIn ease-in 1;
+	animation-duration: 1s;
+	animation: fadeIn ease-in 1;
+	animation-duration: 1s;
+}
+
+.text-justify {
+	text-align: justify;
+	text-justify: auto;
+	text-align: justify;
+	text-justify: auto;
+}
+
+.round-border {
+	border-radius: 5px;
+	border-radius: 5px;
+}
+
+@media screen and (min-width: 992px) {
+	.parallelogram {
+		clip-path: polygon(25% 0%, 100% 0%, 81% 100%, 0% 100%);
+		clip-path: polygon(25% 0%, 100% 0%, 81% 100%, 0% 100%);
+	}
+}
+
+// Meet The Team page
+
+.card-inner {
+	width: 60vw;
+	height: 60vh;
+	margin: auto;
+	margin-top: 5vw;
+	margin-bottom: 5vw;
+	position: relative;
+	cursor: pointer;
+	transition: transform 0.5s;
+	transform-style: preserve-3d;
+}
+
+.card-inner:hover {
+	transform: scale(1.02);
+}
+
+.card-inner.is-flipped {
+	transform: rotateY(180deg);
+}
+
+.card-face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card-face--back {
+	display: flex;
+	align-items: center;
+	transform: rotateY(180deg);
+}
+
+.back-title {
+	text-align: left;
+}
+
+.content-back {
+	width: 65%;
+	height: 70%;
+	overflow: auto;
+	text-align: justify;
+	margin: auto;
+	padding: 5%;
+}
+
+#electronics {
+	background-size: cover;
+	background-position: center;
+	background-image: url('../img/electronics-team.jpg');
+}
+
+#manufacturing {
+	background-size: cover;
+	background-position: center;
+	background-image: url('../img/manufacturing-team.jpg');
+}
+
+#software {
+	background-size: cover;
+	background-position: center;
+	background-image: url('../img/software-team.jpg');
+}
+
+#logistics {
+	background-size: cover;
+	background-position: center;
+	background-image: url('../img/logistics-team.jpg');
+}
+
+#captains {
+	background-size: cover;
+	background-position: center;
+	background-image: url('../img/captains-team.jpg');
+}
+
+.team-title {
+	position: absolute;
+	text-align: right;
+	color: white;
+}
+
+// tablet
+
+@media screen and (max-width: 1024px) {
+	.card-inner {
+		width: 70vw;
+		height: 60vh;
+	}
+}
+
+// landscape orientation on phone
+
+@media screen and (max-width: 767px) {
+	.card-inner {
+		width: 80vw;
+		height: 60vh;
+	}
+}
+
+// portrait orientation on phone
+
+@media screen and (max-width: 500px) {
+	.card-inner {
+		width: 80vw;
+		height: 40vh;
+		margin-top: 10vh;
+		margin-bottom: 10vh;
+	}
+
+	.content-back {
+		width: 70%;
+		top: 30%;
+		padding: 0% 4%;
+	}
+}
+
+#sponsorCarousel{
+	max-width: 760px;
+  	margin: auto;
+}
+#form{
+	margin-top: 5%; 
+	width: 50%;
+	margin-bottom: 10%;
+}
+
+@media only screen and (max-width: 500px){
+	#form{
+		width: 100%;
+	}
+
+}

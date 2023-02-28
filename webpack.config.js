@@ -5,16 +5,21 @@ module.exports = {
     entry: './src/js/index.js',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'public'),
     },
     devServer: {
-        static: {
-            directory: path.join(__dirname, 'public')
-        },
-        compress: true,
-        port: 9000,
+        static: path.resolve(__dirname, 'dist')
     },
-    plugins: [new HtmlWebpackPlugin({ template: './src/html/index.html' })],
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/html/index.html',
+            filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/meet-the-bots.html',
+            filename: 'meet-the-bots.html'
+        })
+    ],
     module: {
         rules: [
             {
@@ -48,7 +53,7 @@ module.exports = {
                         loader: 'sass-loader',
                         options: {
                             warnRuleAsWarning: true,
-                          },
+                        },
                     }
                 ]
             },
@@ -65,5 +70,5 @@ module.exports = {
 
         ]
     },
-    ignoreWarnings:[(warning) => true]
+    ignoreWarnings: [(warning) => true]
 }
