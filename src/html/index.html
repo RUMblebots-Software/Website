@@ -34,11 +34,9 @@
 <body>
     <!--Navigation Bar-->
     <nav class="navbar navbar-expand-md bg-white" id="navbar">
-        <div class="mx-3">
-            <a class="navbar-brand d-none d-md-block" href="index.html">
-                <img id="logo" src="/src/img/rumblebots.png" height="70" alt="navbar-logo">
-            </a>
-        </div>
+        <a class="mx-3 navbar-brand d-none d-md-block" href="index.html">
+            <img id="logo" src="/src/img/rumblebots.png" height="70" alt="navbar-logo">
+        </a>
         <button class="mx-3 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -46,7 +44,7 @@
         <div class="collapse navbar-collapse m-3" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="meet-the-team.html">Meet the Team</a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="meet-the-bots.html">Meet the Bots</a>
@@ -91,7 +89,7 @@
                 </div>
                 <div class="col-md-4 col-sm-12 text-center text-md-start">
                     <div class="mb-3"><i class="fa-solid fa-graduation-cap fa-2xl green-light-rumble"></i></div>
-                    <p class="display-6">Our mission</p>
+                    <p class="display-6">Our Mission</p>
                     <p class="lead text-muted">To complete development of combat robots while enabling its members to
                         learn
                         and
@@ -309,7 +307,50 @@
                     </div>
                 </div>
     </section>
+    <!--Sponsors-->
+    <section class>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-sm-15">
+                    <p class="display-5 text-center">Our Sponsors</p>
+                </div>
+                <div id="sponsorCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/src/img/Boeing-Logo.png"
+                            class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/src/img/Collins-Aerospace-logo.png"
+                            class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/src/img/NHRL.png"
+                            class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/src/img/SolidWorks-Logo.png"
+                            class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/src/img/L3Harris_Technologies.png"
+                            class="d-block w-100">
+                        </div>
 
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#sponsorCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#sponsorCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark" aria-hidden="false"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
     <!--Bot Info-->
     <section class>
         <div class="container">

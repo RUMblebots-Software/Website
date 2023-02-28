@@ -6,8 +6,9 @@
 /* ¡Hoy, Ahora y Siempre... Colegio! */
 $color_1: #217600;
 $color_2: #989898;
-$color_3: #48955f;
-$color_4: #a0c18a;
+$color_3: rgb(72, 149, 95);
+$color_4: rgb(160, 193, 138);
+$color_4T: rgb(241, 241, 241);
 $color_5: #FFBF1F;
 $color_6: #85bb65;
 $color_7: #03A062;
@@ -16,6 +17,10 @@ $color_9: #1DA1F2;
 $color_10: #0072b1;
 $color_11: #333;
 $color_12: #C13584;
+$color_13: #B76935;
+$color_14: #291C60;
+$color_15: #D023CB;
+$color_16: #00DCD8;
 $background-color_1: #217600;
 
 @keyframes blink {
@@ -86,9 +91,33 @@ $background-color_1: #217600;
 	color: $color_4;
 }
 
+.bg-green-light-rumble {
+	background-color: $color_4T;
+}
+
 .yellow-lightning {
 	color: $color_5;
 	color: $color_5;
+}
+
+.brown-gavel{
+	color: $color_13;
+	color: $color_13;
+}
+
+.purple-nhrl{
+ 	color: $color_14;
+	color: $color_14;
+}
+
+.pink-nhrl{
+	color: $color_15;
+	color: $color_15;
+}
+
+.blue-nhrl{
+	color: $color_16;
+	color: $color_16;
 }
 
 .green-logistics {
@@ -338,4 +367,21 @@ $background-color_1: #217600;
 		top: 30%;
 		padding: 0% 4%;
 	}
+}
+
+#sponsorCarousel{
+	max-width: 760px;
+  	margin: auto;
+}
+#form{
+	margin-top: 5%; 
+	width: 50%;
+	margin-bottom: 10%;
+}
+
+@media only screen and (max-width: 500px){
+	#form{
+		width: 100%;
+	}
+
 }
