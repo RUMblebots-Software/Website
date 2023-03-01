@@ -6,6 +6,12 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "rewrites": [
+      {
+          "source": "/Bots",
+          "destination": "/meet-the-bots.html"
+      }
+    ],
     "cleanUrls": true
   }
 }
