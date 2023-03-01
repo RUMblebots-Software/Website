@@ -8,9 +8,7 @@ module.exports = {
         path: path.resolve(__dirname, 'public'),
     },
     devServer: {
-        static: path.resolve(__dirname, 'public'),
-        liveReload: true,
-        hot: true
+        static: path.resolve(__dirname, 'dist')
     },
     plugins: [
         new HtmlWebpackPlugin({
