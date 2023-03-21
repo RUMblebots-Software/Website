@@ -28,6 +28,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/html/apply-now.html',
             filename: 'apply-now.html'
+        }),
+        new HtmlWebpackPlugin({
+            template : './src/html/about-us.html',
+            filename: 'about-us.html'
         })
     ],
     module: {
