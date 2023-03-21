@@ -8,11 +8,18 @@ module.exports = {
         path: path.resolve(__dirname, 'public'),
     },
     devServer: {
-        static: path.resolve(__dirname, 'public'),
-        liveReload: true,
-        hot: true
+        static: path.resolve(__dirname, 'dist')
     },
-    plugins: [new HtmlWebpackPlugin({ template: './src/html/index.html' })],
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/html/index.html',
+            filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/meet-the-bots.html',
+            filename: 'meet-the-bots.html'
+        })
+    ],
     module: {
         rules: [
             {
@@ -46,7 +53,7 @@ module.exports = {
                         loader: 'sass-loader',
                         options: {
                             warnRuleAsWarning: true,
-                          },
+                        },
                     }
                 ]
             },
@@ -63,5 +70,5 @@ module.exports = {
 
         ]
     },
-    ignoreWarnings:[(warning) => true]
+    ignoreWarnings: [(warning) => true]
 }

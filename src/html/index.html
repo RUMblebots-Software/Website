@@ -17,27 +17,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="We design, manufacture, code, test, optimize and market combat robots
+    of varying
+    weights to represent the UPRM and Puerto Rico
+    at the Nationals Robotics League and other robotics competitions.">
 
     <!--Tab Title and Logo-->
     <title>RUMblebots</title>
     <link rel="icon" href="/src/img/rumblebots.png">
 
+    <!--Bootstrap Scripts-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+
     <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/716acecbd2.js" crossorigin="anonymous"></script>
+    
 </head>
 
 
 <body>
     <!--Navigation Bar-->
     <nav class="navbar navbar-expand-md bg-white" id="navbar">
-        <div class="container-fluid">
-            <a class="navbar-brand d-none d-md-block" href="/dist/index.html">
-                <img id="logo" src="/src/img/rumblebots.png" height="70" alt="navbar-logo">
-            </a>
-            <a class="navbar-brand d-none d-md-block" href="https://www.uprm.edu/portada/">
-                <img src="/src/img/rum_upr_web.jpg" class="uprm-web-logo">
-            </a>
+        <a class="mx-3 navbar-brand d-none d-md-block" href="index.html">
+            <img id="logo" src="/src/img/rumblebots.png" height="70" alt="navbar-logo">
+        </a>
+        <button class="mx-3 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse m-3" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Bots">Meet the Bots</a>
+                </li>
+            </ul>
         </div>
+        <a class="navbar-brand d-none d-md-block" href="https://www.uprm.edu/portada/">
+            <img src="/src/img/rum_upr_web.jpg" class="uprm-web-logo">
+        </a>
     </nav>
     <!--Home Page Main Hero-->
     <div class="container-hero">
@@ -53,7 +74,7 @@
                 <p class="display-6 text-center text-muted"><span
                         class="display-6 text-center green-dark-rumble">RUM</span>BLEBOTS is a combat robotics project
                     of the
-                    Department of Mechanical Engineering at UPRM initially founded in 2004</p>
+                    Department of Mechanical Engineering at UPRM initially founded in 2007</p>
             </div>
             <div class="col-lg-7 col-sm-12 gradient d-flex justify-content-end">
                 <img class="img-fluid fade-in" src="/src/img/team2022.jpeg">
@@ -73,7 +94,7 @@
                 </div>
                 <div class="col-md-4 col-sm-12 text-center text-md-start">
                     <div class="mb-3"><i class="fa-solid fa-graduation-cap fa-2xl green-light-rumble"></i></div>
-                    <p class="display-6">Our mission</p>
+                    <p class="display-6">Our Mission</p>
                     <p class="lead text-muted">To complete development of combat robots while enabling its members to
                         learn
                         and
@@ -116,13 +137,16 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-4">
-                                                <img src="/src/img/meeting-10-04-2022-1.jpg" class="round-border img-fluid">
+                                                <img src="/src/img/meeting-10-04-2022-1.jpg"
+                                                    class="round-border img-fluid">
                                             </div>
                                             <div class="col-4">
-                                                <img src="/src/img/meeting-10-04-2022-2.jpg" class="round-border img-fluid">
+                                                <img src="/src/img/meeting-10-04-2022-2.jpg"
+                                                    class="round-border img-fluid">
                                             </div>
                                             <div class="col-4">
-                                                <img src="/src/img/meeting-10-04-2022-3.jpg" class="round-border img-fluid">
+                                                <img src="/src/img/meeting-10-04-2022-3.jpg"
+                                                    class="round-border img-fluid">
                                             </div>
                                         </div>
                                     </div>
@@ -260,7 +284,8 @@
                                                 to keep the team on track. </p>
                                         </div>
                                         <div class="col-md-6 d-flex justify-content-center">
-                                            <img src="/src/img/meeting-10-04-2022-1.jpg" class="round-border" height="350">
+                                            <img src="/src/img/meeting-10-04-2022-1.jpg" class="round-border"
+                                                height="350">
                                         </div>
                                     </div>
                                 </div>
@@ -287,7 +312,50 @@
                     </div>
                 </div>
     </section>
+    <!--Sponsors-->
+    <section class>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-sm-15">
+                    <p class="display-5 text-center">Our Sponsors</p>
+                </div>
+                <div id="sponsorCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/src/img/Boeing-Logo.png"
+                            class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/src/img/Collins-Aerospace-logo.png"
+                            class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/src/img/NHRL.png"
+                            class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/src/img/SolidWorks-Logo.png"
+                            class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/src/img/L3Harris_Technologies.png"
+                            class="d-block w-100">
+                        </div>
 
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#sponsorCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#sponsorCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark" aria-hidden="false"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
     <!--Bot Info-->
     <section class>
         <div class="container">
@@ -329,10 +397,12 @@
                                                 data-bs-ride="carousel">
                                                 <div class="carousel-inner">
                                                     <div class="carousel-item active">
-                                                        <img src="/src/img/arsenal-1.png" class="img-fluid" alt="arsenal-1">
+                                                        <img src="/src/img/arsenal-1.png" class="img-fluid"
+                                                            alt="arsenal-1">
                                                     </div>
                                                     <div class="carousel-item">
-                                                        <img src="/src/img/arsenal-2.png" class="img-fluid" alt="arsenal-2">
+                                                        <img src="/src/img/arsenal-2.png" class="img-fluid"
+                                                            alt="arsenal-2">
                                                     </div>
                                                 </div>
                                             </div>
@@ -421,6 +491,7 @@
             </div>
         </div>
     </section>
+
     <!--Scripts-->
     <script src="/src/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
