@@ -18,6 +18,10 @@ module.exports = {
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
+            template: './src/html/about-us.html',
+            filename: 'about-us.html'
+        }),
+        new HtmlWebpackPlugin({
             template: './src/html/meet-the-team.html',
             filename: 'meet-the-team.html'
         }),

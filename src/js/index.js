@@ -256,3 +256,4 @@ if (document.getElementById("typewriter")) {
     }, 1000);
 
 }
+
