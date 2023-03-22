@@ -408,7 +408,7 @@ body{
     display: block;
     width: 2px;
     height: 100%;
-    background: #c6c6c6;
+    background: #217600;
     margin: 0 auto;
     position: absolute;
     top: 0;
@@ -458,7 +458,7 @@ body{
 }
 
 .main-timeline .icon:after {
-    border: 2px solid #c6c6c6;
+    border: 2px solid #217600;
     left: 3px
 }
 
@@ -481,7 +481,7 @@ body{
     content: "";
     width: 36.5%;
     height: 2px;
-    background: #c6c6c6;
+    background: #217600;
     margin: auto 0;
     position: absolute;
     top: 0;
@@ -519,7 +519,7 @@ body{
 }
 
 .main-timeline .date-outer:after {
-    border: 2px solid #c6c6c6;
+    border: 2px solid #217600;
     left: 6px
 }
 
@@ -649,5 +649,5 @@ body{
 }
 
 .Teampic{
-	    max-width: 100%;  
+	    width: 100%;  
 }
