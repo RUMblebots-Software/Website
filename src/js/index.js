@@ -67,6 +67,7 @@ if (document.querySelector('#majorInput')) {
 
 //This only happens when we are on the apply now page
 if (document.getElementById("application")) {
+    
     const cooldownPeriod = 15 * 60 * 1000; //15 minutes in milliseconds for the submission cooldown
     var filePassed = false; //flag if file was valid
 
@@ -145,7 +146,13 @@ if (document.getElementById("application")) {
                 dateUploaded: date.getTime().toString()
             };
             await setDoc(docRef, docdata);
+            emailjs.sendForm('stackz_contacts', 'rumble_applications',this) 
+            .then(function() {
+                console.log("Application Sent to Email!")
 
+            },function(error) {
+                console.log("FAILED to send application by email",error)
+            })
             myclear();
             Myalert();
             button.innerHTML = "Submit Application";
@@ -156,6 +163,8 @@ if (document.getElementById("application")) {
         }
     });
 }
+
+
 
 
 function getFileType(file) {
@@ -256,4 +265,6 @@ if (document.getElementById("typewriter")) {
     }, 1000);
 
 }
+
+
 
