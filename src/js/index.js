@@ -35,6 +35,7 @@ document.querySelectorAll('.card-inner').forEach((card) => {
     })
 })
 
+//Logic for the carousel animation 
 if (document.querySelector('#sponsorCarousel')) {
     const Mycarousel = document.querySelector('#sponsorCarousel')
 
@@ -45,6 +46,7 @@ if (document.querySelector('#sponsorCarousel')) {
 
 }
 
+// Creates the selection input for the major field
 if (document.querySelector('#majorInput')) {
     var select = document.querySelector('#majorInput');
     var otherMajorInput = document.querySelector('#other-major');
@@ -83,6 +85,7 @@ if (document.getElementById("application")) {
         var bio = document.getElementById("bioInput").value;
         let file = document.getElementById('fileInput').files[0];
 
+        // Verifies if a major was selected else it will fail the submit 
         if (major == "Other...") {
             if (other == "") {
                 myFail("Please input a major");
@@ -124,7 +127,9 @@ if (document.getElementById("application")) {
             return;
         }
 
+        // Loading animation 
         button.innerHTML = '<i class="fa fa-circle-o-notch fa-spin"></i> loading...';
+        // waits for the file to upload 
         await uploadBytes(storageRef, file)
             .then((snapshot) => {
                 console.log('Uploaded file to storage!');
@@ -134,7 +139,7 @@ if (document.getElementById("application")) {
                 console.error('Failed to upload file to storage', error);
                 filePassed = false;
             });
-
+        // after uploading the file it now puts the data at the database
         if (filePassed) {
             const date = new Date(Date.now());
             const docdata = {
@@ -155,9 +160,14 @@ if (document.getElementById("application")) {
             })
             myclear();
             Myalert();
+
+            // Sets the animatin back to original string
             button.innerHTML = "Submit Application";
+
+            // After a few seconds it redirects back to the main page (index.html)
             setTimeout(() => { window.location.replace('./index.html') }, 2000);
         } else {
+            // this only happens when the file upload fails
             button.innerHTML = "Submit Application";
             myFail("Failed to upload file to storage");
         }
@@ -166,19 +176,22 @@ if (document.getElementById("application")) {
 
 
 
-
+// Returns the file type as a string (after the .)
 function getFileType(file) {
     return file.name.split('.').pop()
 }
 
+// Returns the domain as a string (it is everything after the @)
 function getEmailDomain(email) {
     return email.split("@").pop()
 }
 
+// Clears the space when hitting submit (resets the spaces to the original) 
 function myclear() {
     document.getElementById("application").reset();
 }
 
+// Alert function it creats a success message at the top (color green)
 function Myalert() {
     $.bootstrapGrowl("Thank you for submitting your application.", {
         type: "success",
@@ -189,6 +202,7 @@ function Myalert() {
     });
 }
 
+// Alert function it creats a fail message at the top (color red)
 function myFail(err) {
     $.bootstrapGrowl(err, {
         type: "danger",
@@ -199,6 +213,7 @@ function myFail(err) {
     });
 }
 
+// to avoid error it only applies to the html file with that id 
 if (document.getElementById("typewriter")) {
     var typeWriter = document.getElementById('typewriter');
     var cursor = document.getElementById('cursor');
