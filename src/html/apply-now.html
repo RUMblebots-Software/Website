@@ -32,7 +32,16 @@
 
     <!--Bootstrap Scripts-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
-
+    <!--EmailJS Scripts-->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function() {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init('n94cG1LMZtvQQJre7');
+      })();
+  </script>
 </head>
 
 <body style="min-height: 100%;">
@@ -78,15 +87,15 @@
         <form id="application">
             <div class="mb-3">
                 <label for="nameInput" class="form-label" aria-required="true">Full Name</label>
-                <input type="text" class="form-control" id="nameInput" aria-describedby="nameHelp" required>
+                <input name="name" type="text" class="form-control" id="nameInput" aria-describedby="nameHelp" required>
             </div>
             <div class="mb-3">
                 <label for="emailInput" class="form-label" aria-required="true">Enter your E-mail</label>
-                <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" required>
+                <input name="email" type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" required>
             </div>
             <div class="mb-3">
-                <label for="majorSelect">Select Your Major</label>
-                <select class="form-control" id="majorInput">
+                <label  for="majorSelect">Select Your Major</label>
+                <select name="major" class="form-control" id="majorInput">
                     <option selected>INME</option>
                     <option>ININ</option>
                     <option>INEL</option>
@@ -95,7 +104,7 @@
                     <option>Other...</option>
                 </select>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Other Major" id="other-major"
+                    <input name="other" type="text" class="form-control" placeholder="Other Major" id="other-major"
                         aria-describedby="otherMajor" style="display: none;">
                     <div class="input-group-append" style="display: none;">
                         <button class="btn btn-outline-danger" type="button" id="undo-btn">Undo Selection</button>
@@ -103,9 +112,9 @@
                 </div>
             </div>
             <div class="mb-3">
-                <label for="bioInput" class="form-label" aria-required="true">Why are you interested in joining
+                <label  for="bioInput" class="form-label" aria-required="true">Why are you interested in joining
                     Us?</label>
-                <textarea class="form-control" id="bioInput" aria-label="Bio" required></textarea>
+                <textarea name="bio" class="form-control" id="bioInput" aria-label="Bio" maxlength="1000" required></textarea>
             </div>
             <div class="mb-3">
                 <label for="fileInput" class="form-label" aria-required="true">Upload your resume</label>
