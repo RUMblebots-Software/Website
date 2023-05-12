@@ -3,7 +3,6 @@
 
 //Import our custom scss
 import '../scss/styles.scss';
-import { Carousel } from 'bootstrap';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, setDoc, doc, getDoc } from 'firebase/firestore';
 import { getStorage, ref, uploadBytes, uploadString } from "firebase/storage";
@@ -35,15 +34,6 @@ document.querySelectorAll('.card-inner').forEach((card) => {
     })
 })
 
-if (document.querySelector('#sponsorCarousel')) {
-    const Mycarousel = document.querySelector('#sponsorCarousel')
-
-    const carousel = new Carousel(Mycarousel, {
-        interval: 1500,
-        touch: true
-    })
-
-}
 
 if (document.querySelector('#majorInput')) {
     var select = document.querySelector('#majorInput');
