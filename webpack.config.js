@@ -23,6 +23,10 @@ module.exports = {
             template: './src/html/meet-the-team.html',
             filename: 'meet-the-team.html'
         }),
+        new HtmlWebpackPlugin({
+            template: './src/html/proposal.html',
+            filename: 'proposal.html'
+        })
     ],
     module: {
         rules: [
