@@ -7,7 +7,9 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore, setDoc, doc, getDoc } from 'firebase/firestore';
 import { getStorage, ref, uploadBytes, uploadString } from "firebase/storage";
 
+import pdfProposal from '../pdf/proposal2023.pdf';
 
+proposal.pdf = pdfProposal;
 
 //Fire Base Config Info
 const firebaseConfig = {
