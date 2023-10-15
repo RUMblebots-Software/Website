@@ -9,18 +9,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x]
-
+    
     steps:
     - uses: actions/checkout@v3
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: '18.x'
 
     - name: Create dir
       run: |
@@ -37,6 +33,6 @@ jobs:
         # Artifact name
         name: public
         # A file, directory or wildcard pattern that describes what to upload
-        path: /public
+        path: public/
         # The desired behavior if no files are found using the provided path.
         
