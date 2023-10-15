@@ -9,8 +9,6 @@ import { getStorage, ref, uploadBytes, uploadString } from "firebase/storage";
 
 import pdfProposal from '../pdf/proposal2023.pdf';
 
-proposal.pdf = pdfProposal;
-
 //Fire Base Config Info
 const firebaseConfig = {
     apiKey: "AIzaSyDHjvrenveN0OBqC167mRxsmxWN7D4M6Wc",
